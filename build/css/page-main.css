@@ -1,0 +1,466 @@
+@charset "UTF-8";
+.top-pane {
+  max-height: 100vh;
+}
+.top-pane > .video {
+  width: 100vw;
+}
+.top-pane > .video video {
+  width: 100%;
+}
+
+.top-pane {
+  overflow: hidden;
+}
+.top-pane .overlay {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.top-pane .seek-widget {
+  display: flex;
+  gap: 0.3vw;
+}
+.top-pane .seek-widget .fragment {
+  width: 2.4vw;
+  height: 0.4vw;
+  background-color: #8b888b;
+  border-radius: 1vw;
+}
+.top-pane .seek-widget .fragment .progress {
+  border-radius: 1vw;
+  height: 100%;
+  width: 0%;
+  background-color: #ffffff;
+}
+.bottom-pane {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+.bottom-pane > .gradients {
+  position: absolute;
+  width: 100%;
+  top: -20vh;
+  z-index: 1;
+}
+.bottom-pane > .gradients > .gradient-pass1 {
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+.bottom-pane > .gradients > .gradient-pass2 {
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.bottom-pane .content-pane {
+  position: relative;
+  z-index: 1;
+}
+
+.m-logo-main {
+  margin-left: 4.5vw;
+}
+.m-logo-main > img {
+  width: 15vw;
+}
+
+.m-navbar-main {
+  margin-top: 0.6vw;
+}
+
+.m-navbar-left {
+  margin-left: 1vw;
+}
+
+.w-navbar .m-avatar-toolbar {
+  margin-left: 1vw;
+  width: 3vw;
+  height: 3vw;
+  float: right;
+}
+
+.player-top {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.player-top .title-info {
+  flex-grow: 1;
+  margin-left: 4.5vw;
+  margin-top: 1vw;
+  align-self: start;
+  color: #ffffff;
+  font-size: 1.9vw;
+  min-width: 30vw;
+}
+
+.player-control-pp {
+  align-self: right;
+  flex-grow: 30;
+  display: flex;
+  justify-content: right;
+  width: 90%;
+  margin-top: 1.2vw;
+  font-weight: 600;
+}
+.player-control-pp a {
+  margin-right: 3vw;
+  border-radius: 2vw;
+  height: 1.6vw;
+  min-width: 5.7vw;
+  display: flex;
+  align-items: center;
+  border: 0.15vw solid #ffffff;
+}
+.player-control-pp .js-icon {
+  display: inline-block;
+  margin-left: 0.6vw;
+  margin-right: 0.5vw;
+  width: 0.9vw;
+  height: 0.9vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.player-control-pp .m-state-play {
+  background-color: #ffffff;
+  color: #484848;
+}
+.player-control-pp .m-state-play .js-icon {
+  background-image: url("/img/widget/icon/autoplay-play.svg");
+}
+.player-control-pp .m-state-play .js-text span::before {
+  content: "Авто";
+}
+.player-control-pp .m-state-pause {
+  background-color: none;
+  color: #ffffff;
+}
+.player-control-pp .m-state-pause .js-icon {
+  background-image: url("/img/widget/icon/autoplay-pause.svg");
+}
+.player-control-pp .m-state-pause .js-text span::before {
+  content: "Стоп";
+}
+
+.title-info a {
+  color: #ffffff;
+}
+.title-info .genres {
+  margin-top: 1.6vw;
+}
+.title-info .tags {
+  margin-top: 0.95vw;
+}
+
+.player-bottom {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+}
+@media (min-aspect-ratio: 8/5) {
+  .player-bottom {
+    top: 85vh;
+  }
+}
+.player-bottom .group-left {
+  margin-left: 4.5vw;
+  align-self: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.player-bottom .group-left .go-to-title {
+  width: 12vw;
+  margin-top: 0.7vw;
+}
+.player-bottom .group-center {
+  flex-grow: 3;
+  align-self: center;
+  display: flex;
+  height: 2vw;
+  justify-content: center;
+}
+.player-bottom .group-center a {
+  display: flex;
+  top: 7vh;
+  position: relative;
+  height: 3vw;
+}
+.player-bottom .group-center a img {
+  width: 2.5vw;
+}
+.player-bottom .group-right {
+  margin-right: 2vw;
+}
+
+.main-page-title {
+  width: 100%;
+  color: #ffffff;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 1.9vw;
+}
+
+.main-page-genres-show-more {
+  width: 100%;
+  color: #ffffff;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 1.9vw;
+}
+.main-page-genres-show-more .icon {
+  margin-left: 1vw;
+}
+.main-page-genres-show-more .icon img {
+  margin-top: 0.2vw;
+  width: 0.8vw;
+}
+
+.picted-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.picted-list .atitles {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 21.5vw;
+  margin-bottom: 1vw;
+  display: flex;
+}
+.picted-list .atitles > .view-area {
+  overflow: visible;
+  position: absolute;
+  left: 0vw;
+  top: 0vw;
+  width: 4000vw;
+}
+.picted-list .atitles > .view-area > div {
+  margin-left: 1vw;
+  float: left;
+}
+.picted-list .top-genres, .picted-list .rest-genres > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+.picted-list .top-genres .genre-card, .picted-list .rest-genres > div .genre-card {
+  width: 25vw;
+  height: 25vw;
+}
+.picted-list .top-genres .genre-card .expand-area, .picted-list .rest-genres > div .genre-card .expand-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card, .picted-list .rest-genres > div .genre-card .expand-area .img-card {
+  border-radius: 1.9vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: start;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card .genre-name, .picted-list .rest-genres > div .genre-card .expand-area .img-card .genre-name {
+  display: flex;
+  self-align: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card .genre-stats, .picted-list .rest-genres > div .genre-card .expand-area .img-card .genre-stats {
+  display: flex;
+  justify-content: center;
+  self-align: end;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card:hover, .picted-list .rest-genres > div .genre-card .expand-area .img-card:hover {
+  filter: brightness(150%);
+  transform: scale(1.05);
+}
+.picted-list .rest-genres > div > .genre-card {
+  width: 25vw;
+  height: 12.5vw;
+}
+.picted-list .s-state-hidden {
+  display: none;
+}
+.picted-list .news {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 1vw;
+}
+.picted-list .news .new-card {
+  width: 25vw;
+  height: 25vw;
+}
+.picted-list .news .new-card .expand-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picted-list .news .new-card .expand-area .img-card {
+  border-radius: 1.9vw;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 95%;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.picted-list .news .new-card .expand-area .img-card .info {
+  font-weight: 500;
+  margin-top: 85%;
+  height: 7vw;
+  width: 100%;
+  border-radius: 1.5vw;
+  background-color: #1C1B20;
+}
+.picted-list .news .new-card .expand-area .img-card .info .title {
+  font-size: 1vw;
+  padding: 0.6vw;
+}
+.picted-list .news .new-card .expand-area .img-card .info > div {
+  width: 100%;
+}
+.picted-list .news .new-card .expand-area .img-card .info > div .date, .picted-list .news .new-card .expand-area .img-card .info > div .time {
+  font-size: 1vw;
+  border-radius: 0.5vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  color: #AAAAAA;
+}
+.picted-list .news .new-card .expand-area .img-card .info > div .date {
+  float: left;
+  width: 5.5vw;
+  margin-left: 1.1vw;
+}
+.picted-list .news .new-card .expand-area .img-card .info > div .time {
+  float: right;
+  width: 3.5vw;
+  margin-right: 1.1vw;
+}
+.picted-list .news .new-card .expand-area .img-card:hover {
+  filter: brightness(120%);
+  transform: scale(1.05);
+}
+
+.footer {
+  width: 100%;
+  margin-top: 11vw;
+  color: #AAAAAA;
+}
+.footer a {
+  text-decoration: underline;
+  color: #FFA0BD;
+}
+.footer > .top-part {
+  border-radius: 1.9vw 1.9vw 0 0;
+  width: 100%;
+  height: 10vw;
+  background-color: #212027;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.footer > .top-part > div {
+  margin-top: -2vw;
+  margin-left: 6vw;
+  display: flex;
+  gap: 1vw;
+}
+.footer > .top-part > div > .info {
+  padding: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  border-radius: 0.6333333333vw;
+}
+.footer > .top-part .socials {
+  display: flex;
+  gap: 1vw;
+  margin-right: 5vw;
+  margin-top: -2vw;
+}
+.footer > .top-part .socials > a {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2vw;
+  height: 2vw;
+}
+.footer > .top-part .socials .social-tg {
+  background-image: url("/img/widget/icon/social/tg.svg");
+}
+.footer > .top-part .socials .social-tg:hover {
+  background-image: url("/img/widget/icon/social/tg_on.svg");
+}
+.footer > .top-part .socials .social-vk {
+  background-image: url("/img/widget/icon/social/vk.svg");
+}
+.footer > .top-part .socials .social-vk:hover {
+  background-image: url("/img/widget/icon/social/vk_on.svg");
+}
+.footer > .top-part .socials .social-youtube {
+  background-image: url("/img/widget/icon/social/youtube.svg");
+}
+.footer > .top-part .socials .social-youtube:hover {
+  background-image: url("/img/widget/icon/social/youtube_on.svg");
+}
+.footer > .top-part .socials .social-discord {
+  background-image: url("/img/widget/icon/social/discord.svg");
+}
+.footer > .top-part .socials .social-discord:hover {
+  background-image: url("/img/widget/icon/social/discord_on.svg");
+}
+.footer > .top-part .socials .social-twitch {
+  background-image: url("/img/widget/icon/social/twitch.svg");
+}
+.footer > .top-part .socials .social-twitch:hover {
+  background-image: url("/img/widget/icon/social/twitch_on.svg");
+}
+.footer > .top-part .socials .social-tiktok {
+  background-image: url("/img/widget/icon/social/tiktok.svg");
+}
+.footer > .top-part .socials .social-tiktok:hover {
+  background-image: url("/img/widget/icon/social/tiktok_on.svg");
+}
+.footer > .bottom-part {
+  margin-top: -2vw;
+  border-radius: 1.9vw 1.9vw 0 0;
+  width: 100%;
+  height: 3vw;
+  background-color: #2c2b32;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer > .bottom-part .disclaimer {
+  margin-left: 6vw;
+}
+.footer > .bottom-part .policy {
+  margin-right: 5vw;
+}

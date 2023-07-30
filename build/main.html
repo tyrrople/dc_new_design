@@ -1,0 +1,2811 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/js/vendor/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="/js/globals.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-pane">
+
+        <div class="video">
+          <!-- <video id="js-main-video" autoplay muted loop> -->
+          <video id="js-main-video" muted loop>
+            <source src="/img/tmp/output.mp4" type="video/mp4">
+          </video>
+
+          <!-- player-bottom start -->
+          <div class="player-bottom">
+            <div class="group-left">
+              <div class="w-atitle-status-switch">
+		<a href="#" class="button s-ustatus-none">
+		  <div class="status-icon"></div>
+		  <div class="status-name"></div>
+		  <div class="drop-image">
+		    <img src="/img/widget/icon/arrow_right.svg"/>
+		  </div>
+		</a>
+		<div class="dropdown" id="js-main-w-atitle-status-switch">
+		  <div>
+		    <a href="#" class="ustatus-watching">
+		      <img src="/img/widget/icon/ustatus/watching.svg"/>
+		      <span>Смотрю</span>
+		    </a>
+		    <a href="#" class="ustatus-planned">
+		      <img src="/img/widget/icon/ustatus/planned.svg"/>
+		      <span>Запланировано</span>
+		    </a>
+		    <a href="#" class="ustatus-viewed">
+		      <img src="/img/widget/icon/ustatus/viewed.svg"/>
+		      <span>Просмотрено</span>
+		    </a>
+		    <a href="#" class="ustatus-rewatching">
+		      <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+		      <span>Персматриваю</span>
+		    </a>
+		    <a href="#" class="ustatus-favorite">
+		      <img src="/img/widget/icon/ustatus/favorite.svg"/>
+		      <span>Избранное</span>
+		    </a>
+		    <a href="#" class="ustatus-remove">
+		      <img src="/img/widget/icon/ustatus/Trash.svg"/>
+		      <span>Убрать из закладок</span>
+		    </a>
+		  </div>
+		</div>
+	      </div>
+              <a href="#" class="w-button-light go-to-title">Перейти к тайтлу</a>
+            </div>
+
+            <div class="group-center">
+              <a href="#last-updates-header">
+                <img alt="" src="/img/widget/icon/arrow_down_big.svg"/>
+              </a>
+            </div>
+
+            <div class="group-right">
+              <div class="seek-widget">
+                <a href="#" data-url="/img/tmp/output.mp4" class="fragment current-fragment fragment-1"><div class="progress"></div></a>
+                <a href="#" data-url="/img/tmp/dc1.mp4" class="fragment fragment-2"><div class="progress"></div></a>
+                <a href="#" data-url="/img/tmp/dc2.mp4" class="fragment fragment-3"><div class="progress"></div></a>
+                <a href="#" data-url="/img/tmp/dc3.mp4" class="fragment fragment-4"><div class="progress"></div></a>
+              </div>
+            </div>
+          </div>
+          <!-- player-bottom end -->
+
+          
+          <div class="overlay">
+            <div class="w-navbar m-navbar-main">
+	      
+	      <a href="#" class="w-dc-logo-white m-logo-main">
+		<img alt="" src="/img/widget/dc-logo-white.svg"/>
+	      </a>
+
+	      <div class="w-navbar-left m-navbar-left">
+		<a href="#" class="w-button w-btn-release">
+		  <img alt="" src="/img/widget/icon/Desk_alt.svg"/>
+		  Релизы
+		</a>
+		<a href="#" class="w-button w-btn-rooms-list">
+		  <img alt="" src="/img/widget/icon/Playlist.svg"/>
+		  Список комнат
+		</a>
+		<a href="#" class="w-button w-btn-schedule">
+		  <img alt="" src="/img/widget/icon/Date_range.svg"/>
+		  Расписание
+		</a>
+
+		<div class="w-more-btn-container">
+		  <a href="#" class="w-button w-btn-more"><img alt="" src="/img/widget/icon/More_Vertical.svg"/></a>
+		  <div class="w-popup-btn-more" id="js-w-popup-btn-more">
+		    <div>
+		      <a href="#">
+			<div>
+			  <div class="icon"><img src="/img/widget/icon/dollar.svg"/></div>
+			  <div class="text">Поддержка</div>
+			</div>
+		      </a>
+		      <a href="#">
+			<div>
+			  <div class="icon"><img src="/img/widget/icon/Users_Group.svg"/></div>
+			  <div class="text">Наша команда</div>
+			</div>
+		      </a>
+		      <a href="#" style="margin-top: 1vw;">
+			<div>
+			  <div class="icon"><img src="/img/widget/icon/Question.svg"/></div>
+			  <div class="text">FAQ</div>
+			</div>
+		      </a>
+		      <a href="#">
+			<div>
+			  <div class="icon"><img src="/img/widget/icon/info.svg"/></div>
+			  <div class="text">Правила сайта</div>
+			</div>
+		      </a>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+
+	      <div class="w-spanner">
+		
+	      </div>
+
+	      <div class="w-navbar-right">
+		<form class="w-search-widget">
+		  <div class="w-search-widget-left">
+		    
+		  </div>
+		  <div class="w-search-widget-center">
+		    <input name="search" type="text" value=""/>
+		    <div class="w-search-popup" id="js-w-search-popup">
+		      <div class="spanner">
+                        <div class="w-search-result">
+			  <div class="table-hor">
+			    <a href="#" class="picture">
+			      <img src="/img/tmp/cards/last-titles/sr.png"/>
+			    </a>
+			    <div class="table-vert">
+			      <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			      <div class="hor-row">
+				<div class="type">
+				  <span>Тип:</span>
+				  <a href="#" class="w-group-tag m-tag-color-red">TV</a>
+				</div>
+				<div class="year">
+				  <span>Год:</span>
+				  <a href="#" class="w-group-tag m-tag-color-lilac">2021</a>
+				</div>
+				<div class="season">
+				  <span>Сезон:</span>
+				  <a href="#" class="w-group-tag m-tag-color-blue">Осень</a>
+				</div>
+			      </div>
+			      <div class="hor-row">
+				<div class="studio">
+				  <span>Студия:</span>
+				  <a href="#"  class="w-studio-name-text">CloverWorks</a>
+				</div>
+				<div class="episodes">
+				  <div>5/12</div>
+				</div>
+				<div class="status">
+				  <a href="#" class="w-group-tag m-tag-color-green">Завершён</a>
+				</div>
+			      </div>
+			      <div class="genres hor-row">
+				<div class="season">
+				  <span>Жанр:</span>
+				  <a href="#" class="w-genre-tag">Этти</a>
+				  <a href="#" class="w-genre-tag">Драма</a>
+				  <a href="#" class="w-genre-tag">Фэнтези</a>
+				</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="w-search-result">
+			  <div class="table-hor">
+			    <a href="#" class="picture">
+			      <img src="/img/tmp/cards/last-titles/sr.png"/>
+			    </a>
+			    <div class="table-vert">
+			      <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			      <div class="hor-row">
+				<div class="type">
+				  <span>Тип:</span>
+				  <a href="#" class="w-group-tag m-tag-color-red">TV</a>
+				</div>
+				<div class="year">
+				  <span>Год:</span>
+				  <a href="#" class="w-group-tag m-tag-color-lilac">2021</a>
+				</div>
+				<div class="season">
+				  <span>Сезон:</span>
+				  <a href="#" class="w-group-tag m-tag-color-blue">Осень</a>
+				</div>
+			      </div>
+			      <div class="hor-row">
+				<div class="studio">
+				  <span>Студия:</span>
+				  <a href="#"  class="w-studio-name-text">CloverWorks</a>
+				</div>
+				<div class="episodes">
+				  <div>5/12</div>
+				</div>
+				<div class="status">
+				  <a href="#" class="w-group-tag m-tag-color-green">Завершён</a>
+				</div>
+			      </div>
+			      <div class="genres hor-row">
+				<div class="season">
+				  <span>Жанр:</span>
+				  <a href="#" class="w-genre-tag">Этти</a>
+				  <a href="#" class="w-genre-tag">Драма</a>
+				  <a href="#" class="w-genre-tag">Фэнтези</a>
+				</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="w-search-result">
+			  <div class="table-hor">
+			    <a href="#" class="picture">
+			      <img src="/img/tmp/cards/last-titles/sr.png"/>
+			    </a>
+			    <div class="table-vert">
+			      <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			      <div class="hor-row">
+				<div class="type">
+				  <span>Тип:</span>
+				  <a href="#" class="w-group-tag m-tag-color-red">TV</a>
+				</div>
+				<div class="year">
+				  <span>Год:</span>
+				  <a href="#" class="w-group-tag m-tag-color-lilac">2021</a>
+				</div>
+				<div class="season">
+				  <span>Сезон:</span>
+				  <a href="#" class="w-group-tag m-tag-color-blue">Осень</a>
+				</div>
+			      </div>
+			      <div class="hor-row">
+				<div class="studio">
+				  <span>Студия:</span>
+				  <a href="#"  class="w-studio-name-text">CloverWorks</a>
+				</div>
+				<div class="episodes">
+				  <div>5/12</div>
+				</div>
+				<div class="status">
+				  <a href="#" class="w-group-tag m-tag-color-green">Завершён</a>
+				</div>
+			      </div>
+			      <div class="genres hor-row">
+				<div class="season">
+				  <span>Жанр:</span>
+				  <a href="#" class="w-genre-tag">Этти</a>
+				  <a href="#" class="w-genre-tag">Драма</a>
+				  <a href="#" class="w-genre-tag">Фэнтези</a>
+				</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="w-search-result">
+			  <div class="table-hor">
+			    <a href="#" class="picture">
+			      <img src="/img/tmp/cards/last-titles/sr.png"/>
+			    </a>
+			    <div class="table-vert">
+			      <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			      <div class="hor-row">
+				<div class="type">
+				  <span>Тип:</span>
+				  <a href="#" class="w-group-tag m-tag-color-red">TV</a>
+				</div>
+				<div class="year">
+				  <span>Год:</span>
+				  <a href="#" class="w-group-tag m-tag-color-lilac">2021</a>
+				</div>
+				<div class="season">
+				  <span>Сезон:</span>
+				  <a href="#" class="w-group-tag m-tag-color-blue">Осень</a>
+				</div>
+			      </div>
+			      <div class="hor-row">
+				<div class="studio">
+				  <span>Студия:</span>
+				  <a href="#"  class="w-studio-name-text">CloverWorks</a>
+				</div>
+				<div class="episodes">
+				  <div>5/12</div>
+				</div>
+				<div class="status">
+				  <a href="#" class="w-group-tag m-tag-color-green">Завершён</a>
+				</div>
+			      </div>
+			      <div class="genres hor-row">
+				<div class="season">
+				  <span>Жанр:</span>
+				  <a href="#" class="w-genre-tag">Этти</a>
+				  <a href="#" class="w-genre-tag">Драма</a>
+				  <a href="#" class="w-genre-tag">Фэнтези</a>
+				</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-search-widget-right">
+		    <button>
+		      <img alt="" src="/img/widget/icon/Search.svg"/>
+		    </button>
+		</form>
+		  </div>
+		  <div class="w-notifications-container">
+		    <a href="#" class="w-notifications">
+		      <img alt="" src="/img/widget/icon/Notifications.svg"/>
+		      <div class="w-status-area s-status-new"></div>
+		    </a>
+		    <div class="w-notifications-popup" id="js-w-notifications-popup">
+		      <div class="w-notifications-popup-inner">
+			<div class="msg-categories">
+			  <a href="#" class="category m-has-messages m-selected">
+			    <div class="text">Все</div>
+			    <div class="w-status-area s-status-new"></div>
+			  </a>
+			  <a href="#" class="category m-has-messages">
+			    <div class="text">Комментарии</div>
+			    <div class="w-status-area s-status-new "></div>
+			  </a>
+			  <a href="#" class="category m-has-messages">
+			    <div class="text">Новые&nbsp;серии</div>
+			    <div class="w-status-area s-status-new"></div>
+			  </a>
+			  <a href="#" class="category m-has-messages">
+			    <div class="text">Важные</div>
+			    <div class="w-status-area s-status-new"></div>
+			  </a>
+			</div>
+
+			<a href="#" class="mark-as-read w-picted-btn">
+			  <div>
+			    <div class="icon"><img src="/img/widget/icon/Status_list.svg"/></div>
+			    <div class="text">пометить всё как прочитанное</div>
+			  </div>
+			</a>
+
+			<div class="messages m-popup-scroll-area">
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/6.svg"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">Важное оповещение!</a>
+				<div class="body">Тебе было выдано предупреждение (1/3)</div>
+				<div class="date"><div>3 минут назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/7.svg"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">69 людей оценили твой комментарий:</a>
+				<div class="body"><a href="#">Ты ебланище, влагалище, пердун, дрочила, пидор, пизда, туз, малафья...</a></div>
+				<div class="date"><div>5 минут назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/1.png"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">Вышла новая серия: 6/12</a>
+				<div class="body">Эта фарфоровая кукла влюбилась</div>
+				<div class="date"><div>2 дня назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/0.png"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">Вышла новая серия: 5/12</a>
+				<div class="body">Созданный в Бездне: Солнце, вспыхнувшее в Золотом городе</div>
+				<div class="date"><div>5 дней назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/3.svg"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">Yae Miko lover <3 ответил:</a>
+				<div class="body">Пошёл нахуй! <br/>на комментарий: <a href="#">Эммм... Чел... Ты забыл п...</a></div>
+				<div class="date"><div>13 часов назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+                          <div class="message">
+			    <a href="#" class="close-btn">
+			      <img src="/img/widget/icon/Close_round.svg"/>
+			    </a>
+			    <div class="info-container">
+			      <div class="picture">
+				<img src="/img/tmp/toolbar/messages/5.png"/>
+			      </div>
+			      <div class="w-status-area s-status-new"></div>
+			      <div class="text">
+				<a class="title">Достижение получено</a>
+				<div class="body"><span class="w-achievemnt-yellow">Orru SIMP</span></div>
+				<div class="date"><div>1 неделю назад</div></div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+	      </div>
+
+	      <a href="#" class="w-avatar m-avatar-toolbar">
+		<img src="/img/tmp/avatar.png"/>
+	      </a>
+
+	      <div class="w-toolbar-avatar-popup">
+		<div>
+		  <a href="#" class="avatar-row">
+		    <span class="icon">
+		      <img src="/img/tmp/avatar.png"/>
+		    </span>
+		    <span class="text w-bage-designer">
+		      Hideri Lavanette
+		    </span>      
+		  </a>
+		  <div class="row1">
+		    <a href="#" class="bookmarks-btn">
+		      <img src="/img/widget/icon/Bookmark.svg"/>
+		      <span>Закладки</span>
+		    </a>
+		    <a href="#" class="settings-btn">
+		      <img src="/img/widget/icon/Setting_line.svg"/>
+		      <span>Настройки</span>
+		    </a>
+		  </div>
+		  <a href="#" class="w-color-theme-select">
+		    <div class="title">Тема сайта:</div>
+		    <div class="button">
+		      <img src="/img/widget/icon/color-theme-dark.svg"/>
+		    </div>
+		  </a>
+		  
+		  <a href="#" class="logout-btn">
+		    <div class="icon">
+		      <img src="/img/widget/icon/Sign_out_circle.svg"/>
+		    </div>
+		    <div class="text">Выйти</div>
+		  </a>
+		</div>
+	      </div>
+	    </div>
+
+            <div class="clearfix"></div>
+
+            <div class="player-top">
+
+              <div class="title-info">
+                <a href="#" class="title">Твоё имя / Your name</a>
+                <div class="genres">
+                  <a href="#" class="w-genre-tag">Сёнен</a>
+                  <a href="#" class="w-genre-tag">Исекай</a>
+                  <a href="#" class="w-genre-tag">Гарем</a>
+                  <a href="#" class="w-genre-tag">Что?</a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="tags">
+                  <a href="#" class="w-group-tag m-tag-color-red">Film</a>
+                  <a href="#" class="w-group-tag m-tag-color-blue">Зима</a>
+                  <a href="#" class="w-group-tag m-tag-color-lilac">2019</a>
+                </div>
+              </div>
+
+              <div class="player-control-pp">
+                <a href="#" class="m-state-pause">
+                  <div class="js-icon"></div>
+                  <div class="js-text"><span></span></div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-pane">
+        <div class="gradients">
+          <div class="gradient-pass1"></div>
+          <div class="gradient-pass2"></div>
+        </div>
+
+        <div class="content-pane">
+          <!-- ongoing -->
+          <div class="picted-list" style="margin-top: 0">
+            <h2 class="main-page-title" id="last-updates-header">Последние обновления</h2>
+            <div class="atitles-group">
+	      <div class="atitles">
+		<div class="view-area">
+		  <div class="w-card-atitle w-card-atitle-status-watching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/1.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-watching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/2.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/3.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-viewed">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/4.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-viewed js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-rewatching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/7.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-rewatching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-favorite">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/6.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-favorite js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+
+
+		  <div class="w-card-atitle w-card-atitle-status-watching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/1.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-watching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/2.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/3.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-viewed">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/4.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-viewed js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-rewatching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/7.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-rewatching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-favorite">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/6.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-favorite js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+
+	      <div class="w-pager-oval">
+		<a href="#" data-page="1" class="w-page w-current-page"></a>
+		<a href="#" data-page="2" class="w-page"></a>
+		<a href="#" data-page="3" class="w-page"></a>
+		<a href="#" data-page="4" class="w-page"></a>
+	      </div>
+	    </div>
+          </div>
+
+          <!-- popular releases -->
+          <div class="picted-list" style="margin-top: 8vw">
+            <h2 class="main-page-title">Популярные релизы</h2>
+            <div class="atitles-group">
+	      <div class="atitles">
+		<div class="view-area">
+		  <div class="w-card-atitle w-card-atitle-status-watching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/1.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-watching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/2.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/3.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-viewed">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/4.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-viewed js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-rewatching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/7.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-rewatching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-favorite">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/6.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-favorite js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+
+
+		  <div class="w-card-atitle w-card-atitle-status-watching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/1.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-watching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/2.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-planned">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/3.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-planned js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-viewed">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/4.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-viewed js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-rewatching">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/7.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-rewatching js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="w-card-atitle w-card-atitle-status-favorite">
+		    <div class="card">
+		      <a href="#">
+			<img src="/img/tmp/cards/last-titles/6.png"/>
+		      </a>
+		      <div class="info">
+			<div class="rating">
+			  <div class="text">3,5</div>
+			  <span class="icon"><img src="/img/widget/icon/star.svg"/></span>
+			</div>
+
+			<div class="actions">
+			  <div class="w-atitle-status-switch-notext">
+			    <a href="#" class="button s-ustatus-favorite js-acard-trigger">
+			      <div class="status-icon">
+			      </div>
+			    </a>
+			    <div class="dropdown">
+			      <div>
+				<a href="#" class="js-acard-ustatus-select ustatus-watching">
+				  <img src="/img/widget/icon/ustatus/watching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-planned">
+				  <img src="/img/widget/icon/ustatus/planned.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-viewed">
+				  <img src="/img/widget/icon/ustatus/viewed.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-rewatching">
+				  <img src="/img/widget/icon/ustatus/rewatching.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-favorite">
+				  <img src="/img/widget/icon/ustatus/favorite.svg"/>
+				</a>
+				<a href="#" class="js-acard-ustatus-select ustatus-remove">
+				  <img src="/img/widget/icon/ustatus/Trash.svg"/>
+				</a>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		    <div class="popup">
+		      <div>
+			<div class="div">
+			  <div class="title-rus">Эта фарфоровая кукла влюбилась</div>
+			  <div class="title-original">Sono Bisque Doll wa Koi wo Suru</div>
+			</div>
+			<div class="studio">
+			  <span class="title">Студия:</span>
+			  <span class="w-studio-name-text">
+			    CloverWorks        </span>
+			</div>
+			<div class="episodes">
+			  <span class="title">Эпизоды:</span>
+			  <span class="data">
+			    5/12        </span>
+			  <span class="w-group-tag m-tag-color-green">Онгоинг</span>
+			</div>
+			<div class="dubbers">
+			  <span class="title">Озвучили:</span>
+			  <span class="dubber w-studio-name-text">Jerwis</span>
+			  <span class="dubber w-studio-name-text">Mirona</span>
+			  <span class="dubber w-studio-name-text">Orru</span>
+			  <span class="dubber w-studio-name-text">Indominus_Rex</span>
+			</div>
+			<div class="tags">
+                          <span class="w-group-tag m-tag-color-blue">Осень</span>
+			  <span class="w-group-tag m-tag-color-lilac">2022</span>
+			  <span class="w-group-tag m-tag-color-red">TV</span>
+			</div>
+			<div class="genres">
+			  <span class="w-genre-tag">Школа</span>
+			  <span class="w-genre-tag">Романтика</span>
+			  <span class="w-genre-tag">Сэйнэн</span>
+			  <span class="w-genre-tag">Повседневность</span>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+
+	      <div class="w-pager-oval">
+		<a href="#" data-page="1" class="w-page w-current-page"></a>
+		<a href="#" data-page="2" class="w-page"></a>
+		<a href="#" data-page="3" class="w-page"></a>
+		<a href="#" data-page="4" class="w-page"></a>
+	      </div>
+	    </div>
+          </div>
+
+          <!-- popular genres -->
+          <div class="picted-list" style="margin-top: 8vw">
+            <h2 class="main-page-title">Популярные жанры</h2>
+            <div class="top-genres">
+	      <div class="genre-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/isekai.png')">
+		    <div class="gap1" style="height: 20%"></div>
+		    <div class="genre-name">Исекай</div>
+		    <div class="gap2" style="height: 20%"></div>
+		    <div class="genre-stats">69 420 просмотров</div>
+		  </a>
+		</div>
+	      </div>
+	      
+	      
+	      <div class="genre-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/senen.png')">
+		    <div class="gap1" style="height: 20%"></div>
+		    <div class="genre-name">Сёнен</div>
+		    <div class="gap2" style="height: 20%"></div>
+		    <div class="genre-stats">25 459 просмотров</div>
+		  </a>
+		</div>
+	      </div>
+	      
+	      
+	      <div class="genre-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/ecchi.png')">
+		    <div class="gap1" style="height: 20%"></div>
+		    <div class="genre-name">Этти</div>
+		    <div class="gap2" style="height: 20%"></div>
+		    <div class="genre-stats">22 053 просмотров</div>
+		  </a>
+		</div>
+	      </div>
+	      
+	      
+
+	    </div>
+
+	    <a href="#" class="main-page-genres-show-more w-picted-btn">
+	      <div class="text">Показать больше</div>
+	      <div class="icon"><img alt="" src="/img/widget/icon/arrow_right.svg"/></div>
+	    </a>
+
+	    <div class="rest-genres s-state-hidden">
+	      <div>
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/comedy.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Комедия</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">17 435 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/romantic.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Романтика</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">17 001 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/school.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Школа</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">16 793 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/harem.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Гарем</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">15 998 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sainen.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Сэйнэн</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">15 357 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sedze.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Сёдзё</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">14 876 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/vampires.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Вампиры</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">14 813 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/demons.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Демоны</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">13 666 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+
+		<div class="genre-card">
+		  <div class="expand-area">
+		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/senen-ai.png')">
+		      <div class="gap1" style="height: 20%"></div>
+		      <div class="genre-name">Сёнен-ай</div>
+		      <div class="gap2" style="height: 20%"></div>
+		      <div class="genre-stats">10 067 просмотров</div>
+		    </a>
+		  </div>
+		</div>
+		
+		
+	      </div>
+	    </div>
+          </div>
+
+          <!-- news -->
+          <div class="picted-list" style="margin-top: 8vw">
+            <h2 class="main-page-title">Важные новости</h2>
+            <div class="news">
+              <div class="new-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/news/3.png')">
+		    <div class="info">
+		      <div class="title">ВНИМАНИЕ! Лена (Orru) не хочет озвучивать 6-ой сезон ДжоДжо!</div>
+		      <div>
+			<div class="date">01.07.22</div>
+			<div class="time">22:41</div>
+		      </div>
+		    </div>
+		  </a>
+		</div>
+	      </div>
+              <div class="new-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/news/1.png')">
+		    <div class="info">
+		      <div class="title">Почему так популярны исекаи? Пытаемся ответить на этот вопрос!</div>
+		      <div>
+			<div class="date">22.02.22</div>
+			<div class="time">17:27</div>
+		      </div>
+		    </div>
+		  </a>
+		</div>
+	      </div>
+              <div class="new-card">
+		<div class="expand-area">
+		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/news/2.png')">
+		    <div class="info">
+		      <div class="title">Сборник няшных неко-лолей вам в ленту!</div>
+		      <div>
+			<div class="date">19.02.22</div>
+			<div class="time">15:13</div>
+		      </div>
+		    </div>
+		  </a>
+		</div>
+	      </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="top-part">
+            <div>
+              <div class="info">
+                Для правообладателей / Сотрудничество:<br/>
+                <a href="#">partners@dreamerscast.com</a>
+              </div>
+              <div class="info">
+                Появилась проблема? – Пиши:<br/>
+                <a href="#">support@dreamerscast.com</a>
+              </div>
+            </div>
+            <div class="socials">
+              <a href="#" class="social-tg"></a>
+              <a href="#" class="social-vk"></a>
+              <a href="#" class="social-youtube"></a>
+              <a href="#" class="social-discord"></a>
+              <a href="#" class="social-twitch"></a>
+              <a href="#" class="social-tiktok"></a>
+            </div>
+          </div>
+
+          <div class="bottom-part">
+            <div class="disclaimer">Все материалы на сайте представлены только для ознакомления</div>
+            <div class="policy"><a href="#">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/popups.js"></script>
+    <script type="text/javascript" src="/js/main-page.js"></script>
+    <script type="text/javascript" src="/js/main-page-player.js"></script>
+  </body>
+</html>
