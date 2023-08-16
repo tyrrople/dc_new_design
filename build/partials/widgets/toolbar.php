@@ -122,49 +122,51 @@
               </div>
             </a>
 
-            <div class="messages m-popup-scroll-area">
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/6.svg',
-                  'title' => 'Важное оповещение!',
-                  'text' => 'Тебе было выдано предупреждение (1/3)',
-                  'date' => '3 минут назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/7.svg',
-                  'title' => '69 людей оценили твой комментарий:',
-                  'text' => '<a href="#">Ты ебланище, влагалище, пердун, дрочила, пидор, пизда, туз, малафья...</a>',
-                  'date' => '5 минут назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/1.png',
-                  'title' => 'Вышла новая серия: 6/12',
-                  'text' => 'Эта фарфоровая кукла влюбилась',
-                  'date' => '2 дня назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/0.png',
-                  'title' => 'Вышла новая серия: 5/12',
-                  'text' => 'Созданный в Бездне: Солнце, вспыхнувшее в Золотом городе',
-                  'date' => '5 дней назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/3.svg',
-                  'title' => 'Yae Miko lover <3 ответил:',
-                  'text' => 'Пошёл нахуй! <br/>на комментарий: <a href="#">Эммм... Чел... Ты забыл п...</a>',
-                  'date' => '13 часов назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
-              <?php $tbmsg = [
-                  'img' => '/img/tmp/toolbar/messages/5.png',
-                  'title' => 'Достижение получено',
-                  'text' => '<span class="w-achievemnt-yellow">Orru SIMP</span>',
-                  'date' => '1 неделю назад'
-              ]; ?>
-              <?php include("toolbar-message.php"); ?>
+            <div class="messages">
+              <div class="scroll-container">
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/6.svg',
+                    'title' => 'Важное оповещение!',
+                    'text' => 'Тебе было выдано предупреждение (1/3)',
+                    'date' => '3 минут назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/7.svg',
+                    'title' => '69 людей оценили твой комментарий:',
+                    'text' => '<a href="#">Ты ебланище, влагалище, пердун, дрочила, пидор, пизда, туз, малафья...</a>',
+                    'date' => '5 минут назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/1.png',
+                    'title' => 'Вышла новая серия: 6/12',
+                    'text' => 'Эта фарфоровая кукла влюбилась',
+                    'date' => '2 дня назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/0.png',
+                    'title' => 'Вышла новая серия: 5/12',
+                    'text' => 'Созданный в Бездне: Солнце, вспыхнувшее в Золотом городе',
+                    'date' => '5 дней назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/3.svg',
+                    'title' => 'Yae Miko lover <3 ответил:',
+                    'text' => 'Пошёл нахуй! <br/>на комментарий: <a href="#">Эммм... Чел... Ты забыл п...</a>',
+                    'date' => '13 часов назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+                <?php $tbmsg = [
+                    'img' => '/img/tmp/toolbar/messages/5.png',
+                    'title' => 'Достижение получено',
+                    'text' => '<span class="w-achievemnt-yellow">Orru SIMP</span>',
+                    'date' => '1 неделю назад'
+                ]; ?>
+                <?php include("toolbar-message.php"); ?>
+              </div>
             </div>
           </div>
         </div>

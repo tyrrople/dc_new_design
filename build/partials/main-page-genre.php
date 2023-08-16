@@ -1,4 +1,4 @@
-<div class="genre-card">
+<div class="genre-card genre-card-<?php print $genre["id"]; ?>">
   <div class="expand-area">
     <a href="#" class="img-card" style="background-image: url('<?php print $genre['img'];?>')">
       <div class="gap1" style="height: 20%"></div>

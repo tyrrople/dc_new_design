@@ -25,38 +25,78 @@ $(".w-pager-oval>a").click(function(e) {
     $pager.find('.w-current-page').removeClass("w-current-page");
     const $page = $(e.target);
     $page.addClass("w-current-page");
-    const pageOffset = ($page.attr("data-page")-1) * 100;
+    const currentPage = $page.attr("data-page");
+    const $pageContent = $(`.atitles > .view-area > .page[data-page='${currentPage}']`).first();
+
+    const viewPortPos = $(".atitles > .view-area").first()[0].getBoundingClientRect();
+    const pagePos = $pageContent[0].getBoundingClientRect();
+    const leftShift = viewPortPos.left - pagePos.left;
+
     const $viewArea = $page.parents(".atitles-group").first().find(".view-area").first();
-    $viewArea.animate({'left' : `-${pageOffset}vw`});
-    //$page.parents(".atitles-group").first().find(".view-area").first().css("left", `-${pageOffset}vw`);
+    $viewArea.animate({'left' : `${leftShift}`});
 });
 
 
 $(".js-acard-trigger").click(function(e) {
     e.preventDefault();
+    $(".w-atitle-status-switch-notext .dropdown").fadeOut("slow", function() {});
     $(e.target).parents(".w-atitle-status-switch-notext").first().find(".dropdown").first().fadeIn("slow", function() {});
 });
 
 $(".js-acard-ustatus-select").click(function(e) {
     e.preventDefault();
-    $(e.target).parents(".w-atitle-status-switch-notext").first().find(".dropdown").first().fadeOut("slow", function() {});
+    const newStatus = Array.from(e.currentTarget.classList).find((className) => className.startsWith("ustatus-") ).substring(8);
+    const $widget = $(e.target).parents(".w-atitle-status-switch-notext").first();
+    const $trigger = $widget.find(".js-acard-trigger").first();
+    $trigger.removeClass(Array.from($trigger[0].classList).find((className) => className.startsWith("s-ustatus")));
+    $trigger.addClass("s-ustatus-" + newStatus);
+
+    // сюда добавлять сохранение статуса на сервере ...
+    
+    $widget.find(".dropdown").first().fadeOut("slow", function() {});
 });
 
 
+async function showAtitleInfoPopup(element) {
+    let $element = $(element);
+    dc_global.main_page_acard_active_popup = $element;
 
-$(".w-card-atitle").on("mouseover", function (e) {
-    const $popup = $(e.target).parents(".w-card-atitle").first().find(".popup").first();
-    let left = 103;
+    const $popup = $element.find(".popup").first();
+    let left = 100;
 
-    if ( (e.target.getBoundingClientRect().left / document.documentElement.clientWidth) > 0.7) {
+    if ( (element.getBoundingClientRect().left / document.documentElement.clientWidth) > 0.7) {
         left = -103;
     }
     $popup.css("left", `${left}%`);
-    $popup.fadeIn("fast", function() {});
+    // console.log('showing');
+    $popup.fadeIn("fast", function() { 
+        // console.log('showed');
+    });
+}
+
+async function closeAtitleInfoPopups() {
+    $(".w-card-atitle .popup").fadeOut("fast", function() { 
+        dc_global.main_page_acard_active_popup = null;
+    });
+}
+
+$(".w-card-atitle").on("mouseover", async function (e) {
+    await showAtitleInfoPopup(e.currentTarget);
 });
 
-$(".w-card-atitle").on("mouseleave", function (e) {
-    const $popup = $(e.target).parents(".w-card-atitle").first().find(".popup").first();
-    $popup.fadeOut("fast", function() {});
+$(".w-card-atitle").on("mouseleave", async function (e) {
+    if (! dc_global.main_page_acard_active_popup[0].contains(e.target))
+        return;
+
+    await closeAtitleInfoPopups();
 });
 
+
+
+$("#js-main-scroll-to-updates").click(function() {
+    $("html").css('scroll-behavior', 'auto');
+    const topOffset = $("#last-updates-header").offset().top;
+    $(document.body).animate({
+        scrollTop: topOffset
+    }, 1000, "linear");
+});

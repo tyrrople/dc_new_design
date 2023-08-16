@@ -11,10 +11,35 @@
       <div class="top-pane">
 
         <div class="video">
-          <!-- <video id="js-main-video" autoplay muted loop> -->
-          <video id="js-main-video" muted loop>
-            <source src="/img/tmp/output.mp4" type="video/mp4">
-          </video>
+          <?php 
+          $videos = [
+              [
+                  "src" => "/img/tmp/output.mp4",
+                  "poster" => "/img/tmp/output.mp4.jpg"
+              ],
+              [
+                  "src" => "/img/tmp/dc1.mp4",
+                  "poster" => "/img/tmp/dc1.mp4.jpg"
+              ],
+              [
+                  "src" => "/img/tmp/dc2.mp4",
+                  "poster" => "/img/tmp/dc2.mp4.jpg"
+              ],
+              [
+                  "src" => "/img/tmp/dc3.mp4",
+                  "poster" => "/img/tmp/dc3.mp4.jpg"
+              ]
+          ];
+          ?>
+          <div class="player-container">
+            <div class="view-port">
+              <?php foreach ($videos as $video) { ?>
+                <video data-src="<?php print $video["src"] ?>" muted loop>
+                  <source src="<?php print $video['src'] ?>" type="video/mp4">
+                </video>
+              <?php } ?>
+            </div>
+          </div>
 
           <!-- player-bottom start -->
           <div class="player-bottom">
@@ -29,17 +54,16 @@
             </div>
 
             <div class="group-center">
-              <a href="#last-updates-header">
+              <a href="#" id="js-main-scroll-to-updates">
                 <img alt="" src="/img/widget/icon/arrow_down_big.svg"/>
               </a>
             </div>
 
             <div class="group-right">
               <div class="seek-widget">
-                <a href="#" data-url="/img/tmp/output.mp4" class="fragment current-fragment fragment-1"><div class="progress"></div></a>
-                <a href="#" data-url="/img/tmp/dc1.mp4" class="fragment fragment-2"><div class="progress"></div></a>
-                <a href="#" data-url="/img/tmp/dc2.mp4" class="fragment fragment-3"><div class="progress"></div></a>
-                <a href="#" data-url="/img/tmp/dc3.mp4" class="fragment fragment-4"><div class="progress"></div></a>
+                <?php for ($i = 0; $i < count($videos); $i++) { ?>
+                  <a href="#" data-url="<?php print $videos[$i]['src'] ?>" class="fragment <?php if ($i === 0) { print "current-fragment"; } ?>"><div class="progress"></div></a>
+                <?php } ?>
               </div>
             </div>
           </div>

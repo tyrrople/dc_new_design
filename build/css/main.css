@@ -724,7 +724,7 @@ template {
 
 .w-card-atitle {
   position: relative;
-  width: 15.3vw;
+  width: 16.3vw;
   height: 21.5vw;
   display: flex;
   justify-content: center;
@@ -733,7 +733,6 @@ template {
 .w-card-atitle > .card {
   position: relative;
   border-radius: 1.5vw;
-  width: 95%;
   height: 95%;
   transition: all 0.2s ease-in-out;
 }
@@ -835,7 +834,6 @@ template {
 }
 
 .w-card-atitle:hover .card {
-  width: 100%;
   height: 100%;
 }
 
@@ -876,8 +874,8 @@ template {
   justify-content: center;
 }
 .w-atitle-status-switch-notext > .button .status-icon {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2.1vw;
+  height: 2.1vw;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -904,7 +902,7 @@ template {
   align-items: center;
 }
 .w-atitle-status-switch-notext > .dropdown > div > a > img {
-  height: 2.5vw;
+  height: 2.1vw;
 }
 .w-atitle-status-switch-notext > .dropdown > div > a:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
@@ -1009,6 +1007,7 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .mark-as-read {
   border-radius: 0.475vw;
@@ -1055,14 +1054,24 @@ template {
   background-color: rgba(255, 255, 255, 0.0509803922);
   border-radius: 0.95vw 0.95vw 0 0;
   width: 100%;
-  overflow: scroll;
   max-height: 37vw;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  padding: 0.6vw 0.6vw;
+  padding: 0.6vw 0;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  max-height: 31vw;
+  margin-right: 0.3vw;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message {
+  margin-left: 0.6vw;
+  margin-right: 0.3vw;
   position: relative;
   border-radius: 0.6333333333vw;
   background-color: rgba(255, 255, 255, 0.1019607843);
@@ -1070,55 +1079,58 @@ template {
   min-height: 6vw;
   height: 0;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message a {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message a {
   color: #FFA0BD;
   text-decoration: underline;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container a.title {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container a.title {
   color: #ffffff;
   text-decoration: none;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .picture {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .picture img {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture img {
   max-width: 4vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text {
   margin-left: 0.5vw;
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .body {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .body {
   flex-grow: 3;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .date {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .date > div {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date > div {
   margin-right: 0.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .close-btn {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn {
   position: absolute;
   top: 0vw;
-  left: 25.6vw;
-}
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .close-btn img {
+  right: 0.5vw;
   width: 1.5vw;
+  height: 1.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .w-status-area {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn img {
+  width: 100%;
+  height: 100%;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .w-status-area {
   position: absolute;
   top: 0vw;
   left: 0vw;
@@ -1126,8 +1138,8 @@ template {
   height: 0.5vw;
   border-radius: 0.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .s-status-new {
-  background-color: red;
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .s-status-new {
+  background-color: #FF4545;
 }
 
 .w-search-widget {
@@ -1140,75 +1152,79 @@ template {
   display: none;
   z-index: 20;
   width: 32vw;
-  height: 32vw;
   top: 4vw;
   position: absolute;
   right: 10vw;
   background-color: #3b3b3f;
-  overflow: scroll;
 }
 .w-search-widget .w-search-popup > .spanner {
+  width: 31vw;
+  height: 30vw;
+  border-radius: 1.2666666667vw;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
   margin: 0.5vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.w-search-widget .w-search-popup .w-search-result {
+.w-search-widget .w-search-popup > .spanner > .w-search-result {
   color: #C4C4C4;
   height: 11vw;
   background-color: rgba(255, 255, 255, 0.1019607843);
   border-radius: 1vw;
   font-size: 1.2vw;
   font-weight: 400;
+  margin-right: 0.5vw;
 }
-.w-search-widget .w-search-popup .w-search-result .w-genre-tag, .w-search-widget .w-search-popup .w-search-result .w-group-tag {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .w-genre-tag, .w-search-widget .w-search-popup > .spanner > .w-search-result .w-group-tag {
   font-size: 1.2vw;
   font-weight: 400;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .picture {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .picture {
   height: 100%;
   display: flex;
   width: 8.6vw;
   align-items: center;
   justify-content: center;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .picture img {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .picture img {
   width: 7vw;
   border-radius: 0.8vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert {
   display: flex;
   flex-direction: column;
   gap: 0.8vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .title-rus {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .title-rus {
   margin-top: 1vw;
   color: #ffffff;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > div {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > div {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > div > span {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > div > span {
   margin-right: 0.5vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > span {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > span {
   float: left;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .studio, .w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .episodes, .w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .status {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .studio, .w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .episodes, .w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .status {
   margin-right: 0.5vw;
 }
 
@@ -1311,25 +1327,12 @@ template {
   color: #FF4343;
 }
 
-.w-atitle-status-switch .s-ustatus-none .status-name::before {
-  content: "Добавить в закладки";
-}
-.w-atitle-status-switch .s-ustatus-watching .status-name::before {
-  content: "Смотрю";
-}
-.w-atitle-status-switch .s-ustatus-planned .status-name::before {
-  content: "Запланировано";
-}
-.w-atitle-status-switch .s-ustatus-viewed .status-name::before {
-  content: "Просмотрено";
-}
-.w-atitle-status-switch .s-ustatus-rewatching .status-name::before {
-  content: "Пересматриваю";
-}
-.w-atitle-status-switch .s-ustatus-favorite .status-name::before {
-  content: "Избранное";
-}
-.w-atitle-status-switch > .button {
+.w-atitle-status-switch .button {
+  border-left: 2px;
+  border-right: 2px;
+  border-top: 2px;
+  border-bottom: 2px;
+  border-style: solid;
   color: #ffffff;
   position: relative;
   z-index: 25;
@@ -1343,7 +1346,13 @@ template {
   background-color: rgba(28, 27, 32, 0.8980392157);
   height: 100%;
 }
-.w-atitle-status-switch > .button .status-name {
+.w-atitle-status-switch .button .button-caption-area {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.w-atitle-status-switch .button .button-caption-area .status-name {
   height: 1.8vw;
   align-self: center;
   border-radius: 0.7vw;
@@ -1351,17 +1360,23 @@ template {
   display: flex;
   justify-content: center;
 }
-.w-atitle-status-switch > .button .drop-image {
+.w-atitle-status-switch .button .button-caption-area .status-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.w-atitle-status-switch .button .drop-image {
   align-self: flex-end;
   background-color: #484848;
-  border-radius: 0.5vw;
+  border-radius: 0.6vw;
   width: 1.4vw;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.w-atitle-status-switch > .button .drop-image > img {
+.w-atitle-status-switch .button .drop-image > img {
   width: 0.5vw;
 }
 .w-atitle-status-switch .dropdown {
@@ -1383,6 +1398,8 @@ template {
   gap: 0.5vw;
   width: 100%;
   top: -2vw;
+  border-width: 2px;
+  border-style: solid;
 }
 .w-atitle-status-switch .dropdown > div > a {
   width: 100%;
@@ -1398,6 +1415,85 @@ template {
 .w-atitle-status-switch .dropdown > div > a:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
   border-radius: 1vw;
+}
+.w-atitle-status-switch > .s-ustatus-none .button {
+  border-color: rgba(255, 255, 255, 0);
+}
+.w-atitle-status-switch > .s-ustatus-none .status-name::before {
+  content: "Добавить в закладки";
+}
+.w-atitle-status-switch > .s-ustatus-none .button-caption-area .status-icon {
+  width: 0vw;
+  height: 0vw;
+}
+.w-atitle-status-switch .s-ustatus-watching .button {
+  border-color: #A8DAFF;
+}
+.w-atitle-status-switch .s-ustatus-watching .status-name::before {
+  content: "Смотрю";
+}
+.w-atitle-status-switch .s-ustatus-watching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/watching.svg");
+}
+.w-atitle-status-switch .s-ustatus-planned .button {
+  border-color: #B9A8FF;
+}
+.w-atitle-status-switch .s-ustatus-planned .status-name::before {
+  content: "Запланировано";
+}
+.w-atitle-status-switch .s-ustatus-planned .status-icon {
+  background-image: url("/img/widget/icon/ustatus/planned.svg");
+}
+.w-atitle-status-switch .s-ustatus-viewed .button {
+  border-color: #C9FFA8;
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-name::before {
+  content: "Просмотрено";
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-icon {
+  background-image: url("/img/widget/icon/ustatus/viewed.svg");
+}
+.w-atitle-status-switch .s-ustatus-rewatching .button {
+  border-color: #FFECA8;
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-name::before {
+  content: "Пересматриваю";
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/rewatching.svg");
+}
+.w-atitle-status-switch .s-ustatus-favorite .button {
+  border-color: #FFA8D2;
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-name::before {
+  content: "Избранное";
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-icon {
+  background-image: url("/img/widget/icon/ustatus/favorite.svg");
+}
+
+.w-atitle-status-switch > .s-ustatus-none > .dropdown > div {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.w-atitle-status-switch > .s-ustatus-watching > .dropdown > div {
+  border-color: #A8DAFF;
+}
+
+.w-atitle-status-switch > .s-ustatus-planned > .dropdown > div {
+  border-color: #B9A8FF;
+}
+
+.w-atitle-status-switch > .s-ustatus-viewed > .dropdown > div {
+  border-color: #C9FFA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-rewatching > .dropdown > div {
+  border-color: #FFECA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-favorite > .dropdown > div {
+  border-color: #FFA8D2;
 }
 
 .w-genre-tag {
@@ -1506,9 +1602,22 @@ template {
 }
 .top-pane > .video {
   width: 100vw;
+  overflow: hidden;
 }
-.top-pane > .video video {
+.top-pane > .video > .player-container {
   width: 100%;
+  overflow: hidden;
+}
+.top-pane > .video > .player-container > .view-port {
+  width: 400%;
+  position: relative;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.top-pane > .video > .player-container > .view-port video {
+  max-width: 100vw;
 }
 
 .top-pane {
@@ -1537,6 +1646,7 @@ template {
   height: 100%;
   width: 0%;
   background-color: #ffffff;
+  box-shadow: 0 0 5px 0px #ffffff;
 }
 .bottom-pane {
   width: 100%;
@@ -1679,6 +1789,7 @@ template {
 }
 .player-bottom .group-left .go-to-title {
   width: 12vw;
+  font-size: 1vw;
   margin-top: 0.7vw;
 }
 .player-bottom .group-center {
@@ -1746,11 +1857,16 @@ template {
   position: absolute;
   left: 0vw;
   top: 0vw;
-  width: 4000vw;
+  width: 400vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: row;
 }
-.picted-list .atitles > .view-area > div {
-  margin-left: 1vw;
-  float: left;
+.picted-list .atitles > .view-area > .page {
+  width: 99vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .picted-list .top-genres, .picted-list .rest-genres > div {
   display: flex;
@@ -1799,6 +1915,42 @@ template {
 .picted-list .top-genres .genre-card .expand-area .img-card:hover, .picted-list .rest-genres > div .genre-card .expand-area .img-card:hover {
   filter: brightness(150%);
   transform: scale(1.05);
+}
+.picted-list .top-genres .genre-card-isekai, .picted-list .rest-genres > div .genre-card-isekai {
+  text-shadow: 0px 0px 10px #FF5146;
+}
+.picted-list .top-genres .genre-card-senen, .picted-list .rest-genres > div .genre-card-senen {
+  text-shadow: 0px 0px 10px #FF507A;
+}
+.picted-list .top-genres .genre-card-ecchi, .picted-list .rest-genres > div .genre-card-ecchi {
+  text-shadow: 0px 0px 10px #5398FF;
+}
+.picted-list .top-genres .genre-card-comedy, .picted-list .rest-genres > div .genre-card-comedy {
+  text-shadow: 0px 0px 10px #ED6E9F;
+}
+.picted-list .top-genres .genre-card-romantic, .picted-list .rest-genres > div .genre-card-romantic {
+  text-shadow: 0px 0px 10px #FF5384;
+}
+.picted-list .top-genres .genre-card-school, .picted-list .rest-genres > div .genre-card-school {
+  text-shadow: 0px 0px 10px #0BBAFB;
+}
+.picted-list .top-genres .genre-card-harem, .picted-list .rest-genres > div .genre-card-harem {
+  text-shadow: 0px 0px 10px #EACCF8;
+}
+.picted-list .top-genres .genre-card-sainen, .picted-list .rest-genres > div .genre-card-sainen {
+  text-shadow: 0px 0px 10px #B0F0D0;
+}
+.picted-list .top-genres .genre-card-sedze, .picted-list .rest-genres > div .genre-card-sedze {
+  text-shadow: 0px 0px 10px #FF3F3F;
+}
+.picted-list .top-genres .genre-card-vampires, .picted-list .rest-genres > div .genre-card-vampires {
+  text-shadow: 0px 0px 10px #3F22B7;
+}
+.picted-list .top-genres .genre-card-demons, .picted-list .rest-genres > div .genre-card-demons {
+  text-shadow: 0px 0px 10px #CD0000;
+}
+.picted-list .top-genres .genre-card-senen-ai, .picted-list .rest-genres > div .genre-card-senen-ai {
+  text-shadow: 0px 0px 10px #5EA2EF;
 }
 .picted-list .rest-genres > div > .genre-card {
   width: 25vw;
@@ -1973,6 +2125,18 @@ template {
 }
 a, a:hover {
   text-decoration: none;
+}
+
+div::-webkit-scrollbar {
+  background-color: none;
+  width: 0.5vw;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 0vw solid transparent;
+  border-radius: 1vw;
+  background-clip: padding-box;
 }
 
 body {

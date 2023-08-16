@@ -12,6 +12,17 @@ a, a:hover {
     text-decoration: none;    
 }
 
+div::-webkit-scrollbar {
+    background-color: none;
+    width: 0.5vw;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 0vw solid transparent;
+  border-radius: 1vw;
+  background-clip: padding-box;
+}
 
 body {
     font-family: 'Jost';

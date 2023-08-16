@@ -175,7 +175,7 @@
 // начало карточек с главной
 .w-card-atitle {
     position: relative;
-    width: 15.3vw;
+    width: 16.3vw;
     height: 21.5vw;
     display: flex;
     justify-content: center;
@@ -184,7 +184,7 @@
     >.card {
         position: relative;
         border-radius: 1.5vw;
-        width: 95%;
+        // width: 95%;
         height: 95%;
         transition: all .2s ease-in-out;
 
@@ -297,7 +297,7 @@
 
 .w-card-atitle:hover {
     .card {
-        width: 100%;
+        // width: 100%;
         height: 100%;
     }
 }
@@ -339,8 +339,8 @@
         justify-content: center;
 
         .status-icon {
-            width: 2.5vw;
-            height: 2.5vw;
+            width: 2.1vw;
+            height: 2.1vw;
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -365,7 +365,7 @@
                 align-items: center;               
                 
                 >img {
-                    height: 2.5vw;
+                    height: 2.1vw;
                 }
             }
 
@@ -470,9 +470,6 @@
 }
 
 
-.m-popup-scroll-area {
-}
-
 .w-notifications-container > .w-notifications-popup {
     display: none;
   
@@ -487,6 +484,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        overflow: hidden;
 
         .mark-as-read {
             border-radius: calc($main-border-radius / 4);
@@ -541,93 +539,108 @@
             background-color: #FFFFFF0d;
             border-radius: calc($main-border-radius / 2) calc($main-border-radius / 2) 0 0;
             width: 100%;
-            overflow: scroll;
             max-height: 37vw;
             display: flex;
             flex-direction: column;
             gap: 0.5vw;
-            padding: 0.6vw 0.6vw;
+            padding: 0.6vw 0;
 
-            .message {
-                position: relative;
-                border-radius: calc($main-border-radius / 3);
-                background-color: $theme-dark-color-bg-news-time;
-                color: $theme-dark-toolbar-message-fg;
-                min-height: 6vw;
-                height: 0;
+            .scroll-container {
+                overflow-x: hidden;
+                overflow-y: scroll;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5vw;
+                max-height: 31vw;
+                margin-right: 0.3vw;
 
-                a {
-                    color: $theme-dark-color-fg-mailto;
-                    text-decoration: underline;
-                }
-                
-                > .info-container {
-                    display: flex;
-                    flex-direction: row;
-                    height: 100%;
+                .message {
+                    margin-left: 0.6vw;
+                    margin-right: 0.3vw;
+                    position: relative;
+                    border-radius: calc($main-border-radius / 3);
+                    background-color: $theme-dark-color-bg-news-time;
+                    color: $theme-dark-toolbar-message-fg;
+                    min-height: 6vw;
+                    height: 0;
 
-                    a.title {
-                        color: $theme-dark-color-font-main;
-                        text-decoration: none;
+                    a {
+                        color: $theme-dark-color-fg-mailto;
+                        text-decoration: underline;
                     }
-
-                    .picture {
+                    
+                    > .info-container {
                         display: flex;
-                        align-items: center;
                         flex-direction: row;
-
-                        img {
-                            max-width: 4vw;
-                        }
-                    }
-
-                    .text {
-                        margin-left: 0.5vw;
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
                         height: 100%;
 
-                        .body {
-                            flex-grow: 3;
+                        a.title {
+                            color: $theme-dark-color-font-main;
+                            text-decoration: none;
                         }
 
-                        .date {
+                        .picture {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+
+                            img {
+                                max-width: 4vw;
+                            }
+                        }
+
+                        .text {
+                            margin-left: 0.5vw;
                             width: 100%;
                             display: flex;
-                            justify-content: flex-end;
-                            align-items: flex-end;
+                            flex-direction: column;
+                            height: 100%;
 
-                            >div {
-                                margin-right: 0.5vw;
+                            .body {
+                                flex-grow: 3;
+                            }
+
+                            .date {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+
+                                >div {
+                                    margin-right: 0.5vw;
+                                }
                             }
                         }
                     }
-                }
 
-                .close-btn {
-                    position: absolute;
-                    top: 0vw;
-                    left: 25.6vw; 
-                    img {
+                    .close-btn {
+                        position: absolute;
+                        top: 0vw;
+                        right: 0.5vw; 
                         width: 1.5vw;
+                        height: 1.5vw;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
+
+                    .w-status-area {
+                        position: absolute;
+                        top: 0vw;
+                        left: 0vw;
+                        width: 0.5vw;
+                        height: 0.5vw;
+                        border-radius: 0.5vw;
+                    }
+
+
+                    .s-status-new {
+                        background-color: $theme-dark-color-urgent;
+                    }            
+
                 }
-
-                .w-status-area {
-                    position: absolute;
-                    top: 0vw;
-                    left: 0vw;
-                    width: 0.5vw;
-                    height: 0.5vw;
-                    border-radius: 0.5vw;
-                }
-
-
-                .s-status-new {
-                    background-color: red;
-                }            
-
             }
         }
     }
@@ -640,84 +653,89 @@
     .w-search-popup {
         @include w-popup-basic;
         width: 32vw;
-        height: 32vw;
         top: 4vw;
         position: absolute;
         right: 10vw;
         background-color: $theme-dark-search-widget-color;
-        overflow: scroll;
 
         >.spanner {
+            width: 31vw;
+            height: 30vw;
+            border-radius: calc( $main-border-radius / 1.5);
             display: flex;
             flex-direction: column;
             gap: 0.5vw;
             margin: 0.5vw;
-        }
+            overflow-x: hidden;
+            overflow-y: scroll;
 
-        .w-search-result {
-            color: $theme-dark-toolbar-message-fg;
-            height: 11vw;
-            background-color: $theme-dark-color-bg-news-time;
-            border-radius: 1vw;
-            font-size: 1.2vw;
-            font-weight: 400;
 
-            .w-genre-tag, .w-group-tag {
+            >.w-search-result {
+                color: $theme-dark-toolbar-message-fg;
+                height: 11vw;
+                background-color: $theme-dark-color-bg-news-time;
+                border-radius: 1vw;
                 font-size: 1.2vw;
                 font-weight: 400;
-            }
+                margin-right: 0.5vw;
 
-            .table-hor {
-                display: flex;
-                flex-direction: row;
-                height: 100%;
-
-                .picture {
-                    height: 100%;
-                    display: flex;
-                    width: 8.6vw;
-                    align-items: center;
-                    justify-content: center;
-                    
-                    img {
-                        width: 7vw;
-                        border-radius: 0.8vw;
-                    }
+                .w-genre-tag, .w-group-tag {
+                    font-size: 1.2vw;
+                    font-weight: 400;
                 }
 
-                .table-vert {
+                .table-hor {
                     display: flex;
-                    flex-direction: column;
-                    gap: 0.8vw;
+                    flex-direction: row;
+                    height: 100%;
 
-                    .title-rus {
-                        margin-top: 1vw;
-                        color: $theme-dark-color-font-main;
+                    .picture {
+                        height: 100%;
+                        display: flex;
+                        width: 8.6vw;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        img {
+                            width: 7vw;
+                            border-radius: 0.8vw;
+                        }
                     }
 
-                    .hor-row {
-                        width: 100%;
+                    .table-vert {
                         display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 0.8vw;
 
-                        >div {
+                        .title-rus {
+                            margin-top: 1vw;
+                            color: $theme-dark-color-font-main;
+                        }
+
+                        .hor-row {
+                            width: 100%;
                             display: flex;
                             flex-direction: row;
                             align-items: center;
+                            justify-content: flex-start;
+
+                            >div {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                >span {
+                                    margin-right: 0.5vw;
+                                }
+                            }
 
                             >span {
+                                float: left;
+                            }
+
+                            >.studio, >.episodes, >.status {
                                 margin-right: 0.5vw;
                             }
-                        }
-
-                        >span {
-                            float: left;
-                        }
-
-                        >.studio, >.episodes, >.status {
-                            margin-right: 0.5vw;
                         }
                     }
                 }
@@ -833,27 +851,13 @@
 }
 
 
-.w-atitle-status-switch {
-    .s-ustatus-none {
-        .status-name::before { content: 'Добавить в закладки' };
-    }
-    .s-ustatus-watching {
-        .status-name::before { content: 'Смотрю' };
-    }
-    .s-ustatus-planned {
-        .status-name::before { content: 'Запланировано' };
-    }
-    .s-ustatus-viewed {
-        .status-name::before { content: 'Просмотрено' };
-    }
-    .s-ustatus-rewatching {
-        .status-name::before { content: 'Пересматриваю' };
-    }
-    .s-ustatus-favorite {
-        .status-name::before { content: 'Избранное' };
-    }
-
-    >.button {
+.w-atitle-status-switch {  
+    .button {
+        border-left: 2px;
+        border-right: 2px;
+        border-top: 2px;
+        border-bottom: 2px;
+        border-style: solid;
         color: $theme-dark-color-font-main;
         position: relative;
         z-index: 25;
@@ -867,19 +871,33 @@
         background-color: $theme-dark-color-ustatus-button;
         height: 100%;
 
-        .status-name {
-            height: 1.8vw;
-            align-self: center;
-            border-radius: 0.7vw;
-            height: 100%;
+        .button-caption-area {
+            flex-grow: 2;
             display: flex;
+            flex-direction: row;
             justify-content: center;
+            
+            .status-name {
+                height: 1.8vw;
+                align-self: center;
+                border-radius: 0.7vw;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .status-icon {
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 1.5vw;
+                height: 1.5vw;
+            }
         }
 
         .drop-image {
             align-self: flex-end;
             background-color: $theme-dark-color-button-autoplay;
-            border-radius: 0.5vw;
+            border-radius: 0.6vw;
             width: 1.4vw;
             height: 100%;
             display: flex;
@@ -898,7 +916,7 @@
         position: absolute;
         font-size: 1vw;
         font-weight: 400;
-            background-color: $theme-dark-color-navbar-bg;
+        background-color: $theme-dark-color-navbar-bg;
 
         >div {
             position: absolute;
@@ -910,6 +928,8 @@
             gap: 0.5vw;
             width: 100%;
             top: -2vw;
+            border-width: 2px;
+            border-style: solid;
 
             >a {
                 width: 100%;
@@ -930,4 +950,62 @@
             }
         }
     }
+
+    >.s-ustatus-none {
+        .button { border-color: #ffffff00; }
+        .status-name::before { content: 'Добавить в закладки' };
+        .button-caption-area .status-icon {
+            width: 0vw;
+            height: 0vw;
+        }
+    }
+    .s-ustatus-watching {
+        .button { border-color:  #A8DAFF; }
+        .status-name::before { content: 'Смотрю' };
+        .status-icon {
+            background-image: url('/img/widget/icon/ustatus/watching.svg');
+        }
+    }
+    .s-ustatus-planned {
+        .button { border-color:  #B9A8FF; }
+        .status-name::before { content: 'Запланировано' };
+        .status-icon {
+            background-image: url('/img/widget/icon/ustatus/planned.svg');
+        }
+
+    }
+    .s-ustatus-viewed {
+        .button { border-color:  #C9FFA8; }
+        .status-name::before { content: 'Просмотрено' };
+        .status-icon {
+            background-image: url('/img/widget/icon/ustatus/viewed.svg');
+        }
+
+    }
+    .s-ustatus-rewatching {
+        .button { border-color:  #FFECA8; }
+        .status-name::before { content: 'Пересматриваю' };
+        .status-icon {
+            background-image: url('/img/widget/icon/ustatus/rewatching.svg');
+        }
+
+    }
+    .s-ustatus-favorite {
+        .button { border-color:  #FFA8D2; }
+        .status-name::before { content: 'Избранное' };
+        .status-icon {
+            background-image: url('/img/widget/icon/ustatus/favorite.svg');
+        }
+    }
+    
 }
+
+
+
+
+.w-atitle-status-switch > .s-ustatus-none > .dropdown > div { border-color: #ffffff00; }
+.w-atitle-status-switch > .s-ustatus-watching > .dropdown > div { border-color:  #A8DAFF; }
+.w-atitle-status-switch > .s-ustatus-planned > .dropdown > div { border-color:  #B9A8FF; }
+.w-atitle-status-switch > .s-ustatus-viewed > .dropdown > div { border-color:  #C9FFA8; }
+.w-atitle-status-switch > .s-ustatus-rewatching > .dropdown > div { border-color:  #FFECA8; }
+.w-atitle-status-switch > .s-ustatus-favorite > .dropdown > div { border-color:  #FFA8D2; }

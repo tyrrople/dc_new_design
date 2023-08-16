@@ -161,7 +161,7 @@
 
 .w-card-atitle {
   position: relative;
-  width: 15.3vw;
+  width: 16.3vw;
   height: 21.5vw;
   display: flex;
   justify-content: center;
@@ -170,7 +170,6 @@
 .w-card-atitle > .card {
   position: relative;
   border-radius: 1.5vw;
-  width: 95%;
   height: 95%;
   transition: all 0.2s ease-in-out;
 }
@@ -272,7 +271,6 @@
 }
 
 .w-card-atitle:hover .card {
-  width: 100%;
   height: 100%;
 }
 
@@ -313,8 +311,8 @@
   justify-content: center;
 }
 .w-atitle-status-switch-notext > .button .status-icon {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2.1vw;
+  height: 2.1vw;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -341,7 +339,7 @@
   align-items: center;
 }
 .w-atitle-status-switch-notext > .dropdown > div > a > img {
-  height: 2.5vw;
+  height: 2.1vw;
 }
 .w-atitle-status-switch-notext > .dropdown > div > a:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
@@ -446,6 +444,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .mark-as-read {
   border-radius: 0.475vw;
@@ -492,14 +491,24 @@
   background-color: rgba(255, 255, 255, 0.0509803922);
   border-radius: 0.95vw 0.95vw 0 0;
   width: 100%;
-  overflow: scroll;
   max-height: 37vw;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  padding: 0.6vw 0.6vw;
+  padding: 0.6vw 0;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  max-height: 31vw;
+  margin-right: 0.3vw;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message {
+  margin-left: 0.6vw;
+  margin-right: 0.3vw;
   position: relative;
   border-radius: 0.6333333333vw;
   background-color: rgba(255, 255, 255, 0.1019607843);
@@ -507,55 +516,58 @@
   min-height: 6vw;
   height: 0;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message a {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message a {
   color: #FFA0BD;
   text-decoration: underline;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container a.title {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container a.title {
   color: #ffffff;
   text-decoration: none;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .picture {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .picture img {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture img {
   max-width: 4vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text {
   margin-left: 0.5vw;
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .body {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .body {
   flex-grow: 3;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .date {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message > .info-container .text .date > div {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date > div {
   margin-right: 0.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .close-btn {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn {
   position: absolute;
   top: 0vw;
-  left: 25.6vw;
-}
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .close-btn img {
+  right: 0.5vw;
   width: 1.5vw;
+  height: 1.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .w-status-area {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn img {
+  width: 100%;
+  height: 100%;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .w-status-area {
   position: absolute;
   top: 0vw;
   left: 0vw;
@@ -563,8 +575,8 @@
   height: 0.5vw;
   border-radius: 0.5vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .message .s-status-new {
-  background-color: red;
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .s-status-new {
+  background-color: #FF4545;
 }
 
 .w-search-widget {
@@ -577,75 +589,79 @@
   display: none;
   z-index: 20;
   width: 32vw;
-  height: 32vw;
   top: 4vw;
   position: absolute;
   right: 10vw;
   background-color: #3b3b3f;
-  overflow: scroll;
 }
 .w-search-widget .w-search-popup > .spanner {
+  width: 31vw;
+  height: 30vw;
+  border-radius: 1.2666666667vw;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
   margin: 0.5vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.w-search-widget .w-search-popup .w-search-result {
+.w-search-widget .w-search-popup > .spanner > .w-search-result {
   color: #C4C4C4;
   height: 11vw;
   background-color: rgba(255, 255, 255, 0.1019607843);
   border-radius: 1vw;
   font-size: 1.2vw;
   font-weight: 400;
+  margin-right: 0.5vw;
 }
-.w-search-widget .w-search-popup .w-search-result .w-genre-tag, .w-search-widget .w-search-popup .w-search-result .w-group-tag {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .w-genre-tag, .w-search-widget .w-search-popup > .spanner > .w-search-result .w-group-tag {
   font-size: 1.2vw;
   font-weight: 400;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .picture {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .picture {
   height: 100%;
   display: flex;
   width: 8.6vw;
   align-items: center;
   justify-content: center;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .picture img {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .picture img {
   width: 7vw;
   border-radius: 0.8vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert {
   display: flex;
   flex-direction: column;
   gap: 0.8vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .title-rus {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .title-rus {
   margin-top: 1vw;
   color: #ffffff;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > div {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > div {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > div > span {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > div > span {
   margin-right: 0.5vw;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > span {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > span {
   float: left;
 }
-.w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .studio, .w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .episodes, .w-search-widget .w-search-popup .w-search-result .table-hor .table-vert .hor-row > .status {
+.w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .studio, .w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .episodes, .w-search-widget .w-search-popup > .spanner > .w-search-result .table-hor .table-vert .hor-row > .status {
   margin-right: 0.5vw;
 }
 
@@ -748,25 +764,12 @@
   color: #FF4343;
 }
 
-.w-atitle-status-switch .s-ustatus-none .status-name::before {
-  content: "Добавить в закладки";
-}
-.w-atitle-status-switch .s-ustatus-watching .status-name::before {
-  content: "Смотрю";
-}
-.w-atitle-status-switch .s-ustatus-planned .status-name::before {
-  content: "Запланировано";
-}
-.w-atitle-status-switch .s-ustatus-viewed .status-name::before {
-  content: "Просмотрено";
-}
-.w-atitle-status-switch .s-ustatus-rewatching .status-name::before {
-  content: "Пересматриваю";
-}
-.w-atitle-status-switch .s-ustatus-favorite .status-name::before {
-  content: "Избранное";
-}
-.w-atitle-status-switch > .button {
+.w-atitle-status-switch .button {
+  border-left: 2px;
+  border-right: 2px;
+  border-top: 2px;
+  border-bottom: 2px;
+  border-style: solid;
   color: #ffffff;
   position: relative;
   z-index: 25;
@@ -780,7 +783,13 @@
   background-color: rgba(28, 27, 32, 0.8980392157);
   height: 100%;
 }
-.w-atitle-status-switch > .button .status-name {
+.w-atitle-status-switch .button .button-caption-area {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.w-atitle-status-switch .button .button-caption-area .status-name {
   height: 1.8vw;
   align-self: center;
   border-radius: 0.7vw;
@@ -788,17 +797,23 @@
   display: flex;
   justify-content: center;
 }
-.w-atitle-status-switch > .button .drop-image {
+.w-atitle-status-switch .button .button-caption-area .status-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.w-atitle-status-switch .button .drop-image {
   align-self: flex-end;
   background-color: #484848;
-  border-radius: 0.5vw;
+  border-radius: 0.6vw;
   width: 1.4vw;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.w-atitle-status-switch > .button .drop-image > img {
+.w-atitle-status-switch .button .drop-image > img {
   width: 0.5vw;
 }
 .w-atitle-status-switch .dropdown {
@@ -820,6 +835,8 @@
   gap: 0.5vw;
   width: 100%;
   top: -2vw;
+  border-width: 2px;
+  border-style: solid;
 }
 .w-atitle-status-switch .dropdown > div > a {
   width: 100%;
@@ -835,4 +852,83 @@
 .w-atitle-status-switch .dropdown > div > a:hover {
   background-color: rgba(255, 255, 255, 0.1019607843);
   border-radius: 1vw;
+}
+.w-atitle-status-switch > .s-ustatus-none .button {
+  border-color: rgba(255, 255, 255, 0);
+}
+.w-atitle-status-switch > .s-ustatus-none .status-name::before {
+  content: "Добавить в закладки";
+}
+.w-atitle-status-switch > .s-ustatus-none .button-caption-area .status-icon {
+  width: 0vw;
+  height: 0vw;
+}
+.w-atitle-status-switch .s-ustatus-watching .button {
+  border-color: #A8DAFF;
+}
+.w-atitle-status-switch .s-ustatus-watching .status-name::before {
+  content: "Смотрю";
+}
+.w-atitle-status-switch .s-ustatus-watching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/watching.svg");
+}
+.w-atitle-status-switch .s-ustatus-planned .button {
+  border-color: #B9A8FF;
+}
+.w-atitle-status-switch .s-ustatus-planned .status-name::before {
+  content: "Запланировано";
+}
+.w-atitle-status-switch .s-ustatus-planned .status-icon {
+  background-image: url("/img/widget/icon/ustatus/planned.svg");
+}
+.w-atitle-status-switch .s-ustatus-viewed .button {
+  border-color: #C9FFA8;
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-name::before {
+  content: "Просмотрено";
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-icon {
+  background-image: url("/img/widget/icon/ustatus/viewed.svg");
+}
+.w-atitle-status-switch .s-ustatus-rewatching .button {
+  border-color: #FFECA8;
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-name::before {
+  content: "Пересматриваю";
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/rewatching.svg");
+}
+.w-atitle-status-switch .s-ustatus-favorite .button {
+  border-color: #FFA8D2;
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-name::before {
+  content: "Избранное";
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-icon {
+  background-image: url("/img/widget/icon/ustatus/favorite.svg");
+}
+
+.w-atitle-status-switch > .s-ustatus-none > .dropdown > div {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.w-atitle-status-switch > .s-ustatus-watching > .dropdown > div {
+  border-color: #A8DAFF;
+}
+
+.w-atitle-status-switch > .s-ustatus-planned > .dropdown > div {
+  border-color: #B9A8FF;
+}
+
+.w-atitle-status-switch > .s-ustatus-viewed > .dropdown > div {
+  border-color: #C9FFA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-rewatching > .dropdown > div {
+  border-color: #FFECA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-favorite > .dropdown > div {
+  border-color: #FFA8D2;
 }
