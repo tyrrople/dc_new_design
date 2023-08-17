@@ -219,9 +219,9 @@
   display: none;
   z-index: 20;
   position: absolute;
-  width: 121%;
+  width: 19vw;
   height: 100%;
-  padding: 0.5vw 0.5vw;
+  padding: 0.5vw 0.9vw;
   font-size: 1.1vw;
   font-weight: 400;
 }
@@ -229,7 +229,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1vw;
+  font-size: 1vw;
+  font-weight: 400;
+}
+.w-card-atitle .popup > div .title-row {
+  font-size: 1.1vw;
 }
 .w-card-atitle .popup > div > div > .title {
   font-weight: 450;
@@ -242,32 +246,49 @@
 .w-card-atitle .popup > div .title-rus {
   font-weight: 450;
   color: #ffffff;
+  margin-top: 0.1vw;
 }
 .w-card-atitle .popup > div .title-original {
   color: #C4C4C4;
+  margin-top: 0.1vw;
 }
 .w-card-atitle .popup > div .episodes {
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 1vw;
+  gap: 0.4vw;
+  margin-top: 0.5vw;
+}
+.w-card-atitle .popup > div .tags {
+  margin-top: 1vw;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: row;
+  gap: 0.3vw;
 }
 .w-card-atitle .popup > div .w-group-tag {
-  font-size: 1.1vw;
-  font-weight: 400;
+  font-size: 1vw;
+}
+.w-card-atitle .popup > div .studio {
+  margin-top: 1vw;
+}
+.w-card-atitle .popup > div .dubbers {
+  margin-top: 0.5vw;
 }
 .w-card-atitle .popup > div .genres {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-align: flex-start;
-  row-gap: 0.5vw;
-  column-gap: 0.1vw;
+  row-gap: 0.3vw;
+  column-gap: 0.3vw;
+  margin-top: 1vw;
+  margin-left: 0.1vw;
 }
 .w-card-atitle .popup > div .genres > .w-genre-tag {
-  font-size: 1vw;
-  font-weight: 400;
+  font-size: 0.8vw;
+  border-radius: 0.5vw;
+  padding: 0.1vw 0.4vw;
 }
 
 .w-card-atitle:hover .card {
@@ -275,27 +296,51 @@
 }
 
 .w-card-atitle-status-watching > .card, .w-card-atitle-status-watching > .popup {
-  border: 1px solid #A8DAFF;
+  border: 2px solid #A8DAFF;
 }
 
 .w-card-atitle-status-planned > .card, .w-card-atitle-status-planned > .popup {
-  border: 1px solid #B9A8FF;
+  border: 2px solid #B9A8FF;
 }
 
 .w-card-atitle-status-viewed > .card, .w-card-atitle-status-viewed > .popup {
-  border: 1px solid #C9FFA8;
+  border: 2px solid #C9FFA8;
 }
 
 .w-card-atitle-status-rewatching > .card, .w-card-atitle-status-rewatching > .popup {
-  border: 1px solid #FFECA8;
+  border: 2px solid #FFECA8;
 }
 
 .w-card-atitle-status-favorite > .card, .w-card-atitle-status-favorite > .popup {
-  border: 1px solid #FFA8D2;
+  border: 2px solid #FFA8D2;
 }
 
 .w-card-atitle-status-disliked > .card, .w-card-atitle-status-disliked > .popup {
-  border: 1px solid #FF5757;
+  border: 2px solid #FF5757;
+}
+
+.w-card-atitle-status-watching > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #A8DAFF;
+}
+
+.w-card-atitle-status-planned > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #B9A8FF;
+}
+
+.w-card-atitle-status-viewed > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #C9FFA8;
+}
+
+.w-card-atitle-status-rewatching > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #FFECA8;
+}
+
+.w-card-atitle-status-favorite > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #FFA8D2;
+}
+
+.w-card-atitle-status-disliked > .s-card-glow {
+  box-shadow: 0 0 1vw 0.1vw #FF5757;
 }
 
 .w-atitle-status-switch-notext {

@@ -184,7 +184,6 @@
     >.card {
         position: relative;
         border-radius: 1.5vw;
-        // width: 95%;
         height: 95%;
         transition: all .2s ease-in-out;
 
@@ -238,9 +237,9 @@
     .popup {
         @include w-popup-basic;
         position: absolute;
-        width: 121%;
+        width: 19vw;
         height: 100%;
-        padding: 0.5vw 0.5vw;
+        padding: 0.5vw 0.9vw;
         font-size: 1.1vw;
         font-weight: 400;
 
@@ -248,7 +247,12 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            gap: 1vw;
+            font-size: 1vw;
+            font-weight: 400;
+
+            .title-row {
+                font-size: 1.1vw;
+            }
 
             >div >.title {
                 font-weight: 450;
@@ -262,34 +266,55 @@
             .title-rus {
                 font-weight: 450;
                 color: $theme-dark-color-font-main;
+                margin-top: 0.1vw;
             }
             .title-original {
                 color: $theme-dark-toolbar-message-fg;
+                margin-top: 0.1vw;
             }
             .episodes {
                 align-items: center;
                 display: flex;
                 flex-direction: row;
-                gap: 1vw;
+                gap: 0.4vw;
+                margin-top: 0.5vw;
             }
 
-            .w-group-tag {
-                font-size: 1.1vw;
-                font-weight: 400;
+            .tags {
+                margin-top: 1vw;
+                font-size: 1vw;
+                display: flex;
+                flex-direction: row;
+                gap: 0.3vw;
             }
+            .w-group-tag {
+                font-size: 1vw;
+            }
+
+
+            .studio {
+                margin-top: 1vw;
+            }
+
+            .dubbers {
+                margin-top: 0.5vw;
+            }
+
 
             .genres {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                flex-align: flex-start;
-                row-gap: 0.5vw;
-                column-gap: 0.1vw;
+                row-gap: 0.3vw;
+                column-gap: 0.3vw;
+                margin-top: 1vw;
+                margin-left: 0.1vw;
             }
             .genres > .w-genre-tag {
-                font-size: 1vw;
-                font-weight: 400;                
+                font-size: 0.8vw;
+                border-radius: 0.5vw;
+                padding: 0.1vw 0.4vw;
             }
         }
     }
@@ -297,34 +322,62 @@
 
 .w-card-atitle:hover {
     .card {
-        // width: 100%;
-        height: 100%;
-    }
+         height: 100%;
+     }
 }
 
 .w-card-atitle-status-watching>.card , .w-card-atitle-status-watching>.popup {
-    border: 1px solid $theme-dark-color-watching;
+    border: 2px solid $theme-dark-color-watching;
 }
 
 .w-card-atitle-status-planned>.card , .w-card-atitle-status-planned>.popup {
-    border: 1px solid $theme-dark-color-planned;
+    border: 2px solid $theme-dark-color-planned;
 }
 
 .w-card-atitle-status-viewed>.card , .w-card-atitle-status-viewed>.popup {
-    border: 1px solid $theme-dark-color-viewed;
+    border: 2px solid $theme-dark-color-viewed;
 }
 
 .w-card-atitle-status-rewatching>.card , .w-card-atitle-status-rewatching>.popup {
-    border: 1px solid $theme-dark-color-rewatching;
+    border: 2px solid $theme-dark-color-rewatching;
 }
 
 .w-card-atitle-status-favorite>.card , .w-card-atitle-status-favorite>.popup {
-    border: 1px solid $theme-dark-color-favorite;
+    border: 2px solid $theme-dark-color-favorite;
 }
 
 .w-card-atitle-status-disliked>.card , .w-card-atitle-status-disliked>.popup {
-    border: 1px solid $theme-dark-color-disliked;
+    border: 2px solid $theme-dark-color-disliked;
 }
+
+
+
+
+
+.w-card-atitle-status-watching > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-watching;
+}
+
+.w-card-atitle-status-planned > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-planned;
+}
+
+.w-card-atitle-status-viewed > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-viewed;
+}
+
+.w-card-atitle-status-rewatching > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-rewatching;
+}
+
+.w-card-atitle-status-favorite > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-favorite;
+}
+
+.w-card-atitle-status-disliked > .s-card-glow {
+    box-shadow: 0 0 1vw 0.1vw $theme-dark-color-disliked;
+}
+
 
 .w-atitle-status-switch-notext {   
     position: relative;

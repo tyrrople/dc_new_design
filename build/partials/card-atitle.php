@@ -16,7 +16,7 @@
   </div>
   <div class="popup">
     <div>
-      <div class="div">
+      <div class="title-row">
         <div class="title-rus"><?php print $atitle['title_rus'] ?></div>
         <div class="title-original"><?php print $atitle['title_original'] ?></div>
       </div>
@@ -36,7 +36,7 @@
       <div class="dubbers">
         <span class="title">Озвучили:</span>
         <?php foreach ($atitle['dubbers'] as $dubber) { ?>
-          <span class="dubber w-studio-name-text"><?php print $dubber ?></span>
+          <span class="dubber w-studio-name-text"><?php print "$dubber," ?></span>
         <?php } ?>
       </div>
       <div class="tags">

@@ -112,6 +112,9 @@
   font-size: 1.9vw;
   min-width: 30vw;
 }
+.player-top .title-info .w-genre-tag, .player-top .title-info .w-group-tag {
+  margin-right: 0.8vw;
+}
 
 .player-control-pp {
   align-self: right;
@@ -248,21 +251,25 @@
 }
 .picted-list .atitles {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   width: 100%;
-  height: 21.5vw;
+  height: 23.5vw;
   margin-bottom: 1vw;
   display: flex;
 }
 .picted-list .atitles > .view-area {
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: visible;
   position: absolute;
   left: 0vw;
   top: 0vw;
   width: 400vw;
-  height: 15vw;
+  height: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 .picted-list .atitles > .view-area > .page {
   width: 99vw;

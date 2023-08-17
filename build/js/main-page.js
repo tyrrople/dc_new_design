@@ -81,6 +81,7 @@ async function closeAtitleInfoPopups() {
 }
 
 $(".w-card-atitle").on("mouseover", async function (e) {
+    $(e.currentTarget).find(".card").first().addClass("s-card-glow");
     await showAtitleInfoPopup(e.currentTarget);
 });
 
@@ -88,6 +89,7 @@ $(".w-card-atitle").on("mouseleave", async function (e) {
     if (! dc_global.main_page_acard_active_popup[0].contains(e.target))
         return;
 
+    $(e.currentTarget).find(".card").first().removeClass("s-card-glow");
     await closeAtitleInfoPopups();
 });
 
