@@ -702,20 +702,24 @@
 }
  
 .w-search-widget {
-    width: 31vw;
+    width: 26.5vw;
     z-index: 10;
 
     .w-search-popup {
-        @include w-popup-basic;
-        width: 32vw;
+        background-color: $theme-dark-color-navbar-bg;
+        border-radius: 0.7vw;
+        display: none;
+        z-index: 20;
+
+        width: 26.5vw;
         top: 4vw;
         position: absolute;
-        right: 10vw;
+        right: 10.5vw;
         background-color: $theme-dark-search-widget-color;
 
         >.spanner {
-            width: 31vw;
-            height: 30vw;
+            width: 25.5vw;
+            height: 25vw;
             border-radius: calc( $main-border-radius / 1.5);
             display: flex;
             flex-direction: column;
@@ -727,33 +731,34 @@
 
             >.w-search-result {
                 color: $theme-dark-toolbar-message-fg;
-                height: 11vw;
+                height: 9vw;
                 background-color: $theme-dark-color-bg-news-time;
                 border-radius: 1vw;
-                font-size: 1.2vw;
+                font-size: 0.9vw;
                 font-weight: 400;
                 margin-right: 0.5vw;
 
                 .w-genre-tag, .w-group-tag {
-                    font-size: 1.2vw;
+                    font-size: 0.9vw;
                     font-weight: 400;
+                    margin-right: 0.6vw;
+                    border-radius: 0.4vw;
                 }
 
                 .table-hor {
                     display: flex;
                     flex-direction: row;
-                    height: 100%;
 
                     .picture {
-                        height: 100%;
                         display: flex;
-                        width: 8.6vw;
+                        width: 5.7vw;
                         align-items: center;
                         justify-content: center;
                         
                         img {
-                            width: 7vw;
+                            width: 5.4vw;
                             border-radius: 0.8vw;
+                            margin-left: 0.5vw;
                         }
                     }
 
@@ -761,9 +766,11 @@
                         display: flex;
                         flex-direction: column;
                         gap: 0.8vw;
+                        height: 8.7vw;
 
                         .title-rus {
-                            margin-top: 1vw;
+                            margin-top: 0.6vw;
+                            margin-left: 0.9vw;
                             color: $theme-dark-color-font-main;
                         }
 
@@ -773,6 +780,7 @@
                             flex-direction: row;
                             align-items: center;
                             justify-content: flex-start;
+                            margin-left: 0.9vw;
 
                             >div {
                                 display: flex;
@@ -780,7 +788,7 @@
                                 align-items: center;
 
                                 >span {
-                                    margin-right: 0.5vw;
+                                    margin-right: 0.2vw;
                                 }
                             }
 

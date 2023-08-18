@@ -1,7 +1,7 @@
 const atitleStatusSwitchCss = {
     active : {
         left: "0.1vw",
-        bottom: "2px",
+        bottom: "5px",
         "z-index" : 27,
         width : "12.8vw"
     },

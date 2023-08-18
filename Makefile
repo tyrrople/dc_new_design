@@ -8,5 +8,5 @@ dump_html:
 	emacs build/main.html --batch --eval="(progn (package-initialize)(load \"web-mode\")(web-mode)(setq web-mode-markup-indent-offset 2)(indent-region (point-min) (point-max))(save-buffer))"
 
 
-git_sync: dump_html
+git_sync:
 	GIT_SSH_COMMAND='ssh -i ~/.ssh/1-time-key/id_dreamcaster' git push
