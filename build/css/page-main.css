@@ -193,9 +193,10 @@
   align-items: flex-start;
 }
 .player-bottom .group-left .go-to-title {
-  width: 12vw;
+  width: 13vw;
   font-size: 1vw;
   margin-top: 0.7vw;
+  height: 1.8vw;
 }
 .player-bottom .group-center {
   flex-grow: 3;
@@ -277,30 +278,30 @@
   flex-direction: row;
   justify-content: center;
 }
-.picted-list .top-genres, .picted-list .rest-genres > div {
+.picted-list .top-genres, .picted-list .rest-genres > div > div {
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 1vw;
+  gap: 0vw;
   flex-wrap: wrap;
 }
-.picted-list .top-genres .genre-card, .picted-list .rest-genres > div .genre-card {
-  width: 25vw;
-  height: 25vw;
+.picted-list .top-genres .genre-card, .picted-list .rest-genres > div > div .genre-card {
+  width: 23vw;
+  height: 23vw;
 }
-.picted-list .top-genres .genre-card .expand-area, .picted-list .rest-genres > div .genre-card .expand-area {
-  width: 100%;
-  height: 100%;
+.picted-list .top-genres .genre-card .expand-area, .picted-list .rest-genres > div > div .genre-card .expand-area {
+  width: 23vw;
+  height: 23vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.picted-list .top-genres .genre-card .expand-area .img-card, .picted-list .rest-genres > div .genre-card .expand-area .img-card {
+.picted-list .top-genres .genre-card .expand-area .img-card, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card {
   border-radius: 1.9vw;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 95%;
-  height: 95%;
+  width: 20.2vw;
+  height: 20.2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -308,62 +309,95 @@
   color: #ffffff;
   transition: all 0.2s ease-in-out;
 }
-.picted-list .top-genres .genre-card .expand-area .img-card .genre-name, .picted-list .rest-genres > div .genre-card .expand-area .img-card .genre-name {
+.picted-list .top-genres .genre-card .expand-area .img-card .gap1, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card .gap1 {
+  height: 18%;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card .gap2, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card .gap2 {
+  height: 22%;
+}
+.picted-list .top-genres .genre-card .expand-area .img-card .genre-name, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card .genre-name {
   display: flex;
   self-align: center;
   justify-content: center;
   width: 100%;
-  font-size: 2vw;
+  font-size: 1.9vw;
   font-weight: 500;
 }
-.picted-list .top-genres .genre-card .expand-area .img-card .genre-stats, .picted-list .rest-genres > div .genre-card .expand-area .img-card .genre-stats {
+.picted-list .top-genres .genre-card .expand-area .img-card .genre-stats, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card .genre-stats {
   display: flex;
   justify-content: center;
   self-align: end;
 }
-.picted-list .top-genres .genre-card .expand-area .img-card:hover, .picted-list .rest-genres > div .genre-card .expand-area .img-card:hover {
-  filter: brightness(150%);
-  transform: scale(1.05);
+.picted-list .top-genres .genre-card .expand-area .img-card:hover, .picted-list .rest-genres > div > div .genre-card .expand-area .img-card:hover {
+  filter: brightness(130%);
+  transform: scale(1.1);
 }
-.picted-list .top-genres .genre-card-isekai, .picted-list .rest-genres > div .genre-card-isekai {
+.picted-list .top-genres .genre-card-isekai, .picted-list .rest-genres > div > div .genre-card-isekai {
   text-shadow: 0px 0px 10px #FF5146;
 }
-.picted-list .top-genres .genre-card-senen, .picted-list .rest-genres > div .genre-card-senen {
+.picted-list .top-genres .genre-card-senen, .picted-list .rest-genres > div > div .genre-card-senen {
   text-shadow: 0px 0px 10px #FF507A;
 }
-.picted-list .top-genres .genre-card-ecchi, .picted-list .rest-genres > div .genre-card-ecchi {
+.picted-list .top-genres .genre-card-ecchi, .picted-list .rest-genres > div > div .genre-card-ecchi {
   text-shadow: 0px 0px 10px #5398FF;
 }
-.picted-list .top-genres .genre-card-comedy, .picted-list .rest-genres > div .genre-card-comedy {
+.picted-list .top-genres .genre-card-comedy, .picted-list .rest-genres > div > div .genre-card-comedy {
   text-shadow: 0px 0px 10px #ED6E9F;
 }
-.picted-list .top-genres .genre-card-romantic, .picted-list .rest-genres > div .genre-card-romantic {
+.picted-list .top-genres .genre-card-romantic, .picted-list .rest-genres > div > div .genre-card-romantic {
   text-shadow: 0px 0px 10px #FF5384;
 }
-.picted-list .top-genres .genre-card-school, .picted-list .rest-genres > div .genre-card-school {
+.picted-list .top-genres .genre-card-school, .picted-list .rest-genres > div > div .genre-card-school {
   text-shadow: 0px 0px 10px #0BBAFB;
 }
-.picted-list .top-genres .genre-card-harem, .picted-list .rest-genres > div .genre-card-harem {
+.picted-list .top-genres .genre-card-harem, .picted-list .rest-genres > div > div .genre-card-harem {
   text-shadow: 0px 0px 10px #EACCF8;
 }
-.picted-list .top-genres .genre-card-sainen, .picted-list .rest-genres > div .genre-card-sainen {
+.picted-list .top-genres .genre-card-sainen, .picted-list .rest-genres > div > div .genre-card-sainen {
   text-shadow: 0px 0px 10px #B0F0D0;
 }
-.picted-list .top-genres .genre-card-sedze, .picted-list .rest-genres > div .genre-card-sedze {
+.picted-list .top-genres .genre-card-sedze, .picted-list .rest-genres > div > div .genre-card-sedze {
   text-shadow: 0px 0px 10px #FF3F3F;
 }
-.picted-list .top-genres .genre-card-vampires, .picted-list .rest-genres > div .genre-card-vampires {
+.picted-list .top-genres .genre-card-vampires, .picted-list .rest-genres > div > div .genre-card-vampires {
   text-shadow: 0px 0px 10px #3F22B7;
 }
-.picted-list .top-genres .genre-card-demons, .picted-list .rest-genres > div .genre-card-demons {
+.picted-list .top-genres .genre-card-demons, .picted-list .rest-genres > div > div .genre-card-demons {
   text-shadow: 0px 0px 10px #CD0000;
 }
-.picted-list .top-genres .genre-card-senen-ai, .picted-list .rest-genres > div .genre-card-senen-ai {
+.picted-list .top-genres .genre-card-senen-ai, .picted-list .rest-genres > div > div .genre-card-senen-ai {
   text-shadow: 0px 0px 10px #5EA2EF;
 }
-.picted-list .rest-genres > div > .genre-card {
-  width: 25vw;
-  height: 12.5vw;
+.picted-list .rest-genres {
+  width: 100%;
+}
+.picted-list .rest-genres > .center-span {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.picted-list .rest-genres > .center-span > .list-view {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+.picted-list .rest-genres > .center-span > .list-view > .genre-card {
+  width: 23vw;
+  height: 11.5vw;
+}
+.picted-list .rest-genres > .center-span > .list-view > .genre-card .expand-area {
+  width: 23vw;
+  height: 11.5vw;
+}
+.picted-list .rest-genres > .center-span > .list-view > .genre-card .expand-area .img-card {
+  height: 10.1vw;
+}
+.picted-list .rest-genres > .center-span > .list-view > .genre-card .expand-area .img-card > .gap1 {
+  height: 30%;
+}
+.picted-list .rest-genres > .center-span > .list-view > .genre-card .expand-area .img-card > .gap2 {
+  height: 14%;
 }
 .picted-list .s-state-hidden {
   display: none;

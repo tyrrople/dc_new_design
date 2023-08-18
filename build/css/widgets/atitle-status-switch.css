@@ -1,0 +1,201 @@
+@charset "UTF-8";
+.w-atitle-status-switch {
+  position: relative;
+  font-size: 0.9vw;
+  font-weight: 400;
+}
+.w-atitle-status-switch .button-border {
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  height: 1.8vw;
+  width: 13vw;
+  position: relative;
+  display: block;
+  top: 1.8vw;
+  left: 0vw;
+  z-index: 26;
+  border-radius: 0.86vw;
+}
+.w-atitle-status-switch .button {
+  color: #ffffff;
+  border-radius: 0.86vw;
+  position: relative;
+  z-index: 25;
+  width: 13vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color: rgba(28, 27, 32, 0.8980392157);
+  height: 1.8vw;
+}
+.w-atitle-status-switch .button .button-caption-area {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.w-atitle-status-switch .button .button-caption-area .status-name {
+  height: 1.8vw;
+  align-self: center;
+  border-radius: 0.7vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.w-atitle-status-switch .button .button-caption-area .status-icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.w-atitle-status-switch .button .button-caption-area .status-icon-container .status-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  line-height: -1vw;
+  width: 1.3vw;
+  height: 1.3vw;
+}
+.w-atitle-status-switch .button .drop-image {
+  align-self: flex-end;
+  background-color: #484848;
+  border-radius: 0.7vw;
+  width: 1.8vw;
+  height: 1.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.05vw;
+}
+.w-atitle-status-switch .button .drop-image > img {
+  width: 0.5vw;
+}
+.w-atitle-status-switch .dropdown {
+  display: none;
+  z-index: 27;
+  width: 13vw;
+  left: 0vw;
+  top: -11.3vw;
+  position: absolute;
+  font-size: 0.9vw;
+  font-weight: 400;
+  background-color: rgb(28, 27, 32);
+  border-radius: 0.86vw;
+  z-index: 25;
+  height: 14vw;
+}
+.w-atitle-status-switch .dropdown > .dropdown-content {
+  overflow: hidden;
+  padding: 0.5vw 0;
+  background-color: rgb(28, 27, 32);
+  border-radius: 0.86vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  width: 100%;
+  border-width: 2px;
+  border-style: solid;
+  position: relative;
+  justify-content: center;
+}
+.w-atitle-status-switch .dropdown > .dropdown-content > a {
+  margin-left: 2.5%;
+  width: 95%;
+  color: #ffffff;
+}
+.w-atitle-status-switch .dropdown > .dropdown-content > a > img {
+  margin-left: 0.5vw;
+  height: 1.5vw;
+}
+.w-atitle-status-switch .dropdown > .dropdown-content > a:last-child {
+  margin-bottom: 2vw;
+}
+.w-atitle-status-switch .dropdown > .dropdown-content > a:hover {
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  border-radius: 0.5vw;
+}
+.w-atitle-status-switch > .s-ustatus-none .button-border {
+  border-color: rgba(255, 255, 255, 0);
+}
+.w-atitle-status-switch > .s-ustatus-none .status-name::before {
+  content: "Добавить в закладки";
+}
+.w-atitle-status-switch > .s-ustatus-none .button-border-caption-area .status-icon {
+  width: 0vw;
+  height: 0vw;
+}
+.w-atitle-status-switch .s-ustatus-watching .button-border {
+  border-color: #A8DAFF;
+}
+.w-atitle-status-switch .s-ustatus-watching .status-name::before {
+  content: "Смотрю";
+}
+.w-atitle-status-switch .s-ustatus-watching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/watching.svg");
+  margin-right: 0.3vw;
+}
+.w-atitle-status-switch .s-ustatus-planned .button-border {
+  border-color: #B9A8FF;
+}
+.w-atitle-status-switch .s-ustatus-planned .status-name::before {
+  content: "Запланировано";
+}
+.w-atitle-status-switch .s-ustatus-planned .status-icon {
+  background-image: url("/img/widget/icon/ustatus/planned.svg");
+  margin-right: 0.3vw;
+}
+.w-atitle-status-switch .s-ustatus-viewed .button-border {
+  border-color: #C9FFA8;
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-name::before {
+  content: "Просмотрено";
+}
+.w-atitle-status-switch .s-ustatus-viewed .status-icon {
+  background-image: url("/img/widget/icon/ustatus/viewed.svg");
+  margin-right: 0.3vw;
+}
+.w-atitle-status-switch .s-ustatus-rewatching .button-border {
+  border-color: #FFECA8;
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-name::before {
+  content: "Пересматриваю";
+}
+.w-atitle-status-switch .s-ustatus-rewatching .status-icon {
+  background-image: url("/img/widget/icon/ustatus/rewatching.svg");
+  margin-right: 0.3vw;
+}
+.w-atitle-status-switch .s-ustatus-favorite .button-border {
+  border-color: #FFA8D2;
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-name::before {
+  content: "Избранное";
+}
+.w-atitle-status-switch .s-ustatus-favorite .status-icon {
+  background-image: url("/img/widget/icon/ustatus/favorite.svg");
+  margin-right: 0.3vw;
+}
+
+.w-atitle-status-switch > .s-ustatus-none > .dropdown > div {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.w-atitle-status-switch > .s-ustatus-watching > .dropdown > div {
+  border-color: #A8DAFF;
+}
+
+.w-atitle-status-switch > .s-ustatus-planned > .dropdown > div {
+  border-color: #B9A8FF;
+}
+
+.w-atitle-status-switch > .s-ustatus-viewed > .dropdown > div {
+  border-color: #C9FFA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-rewatching > .dropdown > div {
+  border-color: #FFECA8;
+}
+
+.w-atitle-status-switch > .s-ustatus-favorite > .dropdown > div {
+  border-color: #FFA8D2;
+}

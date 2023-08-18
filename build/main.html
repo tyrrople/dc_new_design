@@ -32,10 +32,15 @@
           <div class="player-bottom">
             <div class="group-left">
               <div class="w-atitle-status-switch">
+
+
 		<div class="js-status s-ustatus-none">
+		  <a href="#" class="button-border"></a>
 		  <a href="#" class="button js-acard-trigger">
 		    <div class="button-caption-area">
-		      <div class="status-icon"></div>
+		      <div class="status-icon-container">
+			<div class="status-icon"></div>
+		      </div>
 		      <div class="status-name"></div>
 		    </div>
 		    <div class="drop-image">
@@ -43,28 +48,28 @@
 		    </div>
 		  </a>
 		  <div class="dropdown" id="js-main-w-atitle-status-switch">
-		    <div>
-		      <a href="#" class="ustatus-watching">
+		    <div class="dropdown-content">
+		      <a href="#" class="js-ustatus ustatus-watching">
 			<img src="/img/widget/icon/ustatus/watching.svg"/>
 			<span>Смотрю</span>
 		      </a>
-		      <a href="#" class="ustatus-planned">
+		      <a href="#" class="js-ustatus ustatus-planned">
 			<img src="/img/widget/icon/ustatus/planned.svg"/>
 			<span>Запланировано</span>
 		      </a>
-		      <a href="#" class="ustatus-viewed">
+		      <a href="#" class="js-ustatus ustatus-viewed">
 			<img src="/img/widget/icon/ustatus/viewed.svg"/>
 			<span>Просмотрено</span>
 		      </a>
-		      <a href="#" class="ustatus-rewatching">
+		      <a href="#" class="js-ustatus ustatus-rewatching">
 			<img src="/img/widget/icon/ustatus/rewatching.svg"/>
 			<span>Персматриваю</span>
 		      </a>
-		      <a href="#" class="ustatus-favorite">
+		      <a href="#" class="js-ustatus ustatus-favorite">
 			<img src="/img/widget/icon/ustatus/favorite.svg"/>
 			<span>Избранное</span>
 		      </a>
-		      <a href="#" class="ustatus-none">
+		      <a href="#" class="js-ustatus ustatus-none">
 			<img src="/img/widget/icon/ustatus/Trash.svg"/>
 			<span>Убрать из закладок</span>
 		      </a>
@@ -2916,9 +2921,9 @@
 	      <div class="genre-card genre-card-isekai">
 		<div class="expand-area">
 		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/isekai.png')">
-		    <div class="gap1" style="height: 20%"></div>
+		    <div class="gap1"></div>
 		    <div class="genre-name">Исекай</div>
-		    <div class="gap2" style="height: 20%"></div>
+		    <div class="gap2"></div>
 		    <div class="genre-stats">69 420 просмотров</div>
 		  </a>
 		</div>
@@ -2928,9 +2933,9 @@
 	      <div class="genre-card genre-card-senen">
 		<div class="expand-area">
 		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/senen.png')">
-		    <div class="gap1" style="height: 20%"></div>
+		    <div class="gap1"></div>
 		    <div class="genre-name">Сёнен</div>
-		    <div class="gap2" style="height: 20%"></div>
+		    <div class="gap2"></div>
 		    <div class="genre-stats">25 459 просмотров</div>
 		  </a>
 		</div>
@@ -2940,9 +2945,9 @@
 	      <div class="genre-card genre-card-ecchi">
 		<div class="expand-area">
 		  <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/ecchi.png')">
-		    <div class="gap1" style="height: 20%"></div>
+		    <div class="gap1"></div>
 		    <div class="genre-name">Этти</div>
-		    <div class="gap2" style="height: 20%"></div>
+		    <div class="gap2"></div>
 		    <div class="genre-stats">22 053 просмотров</div>
 		  </a>
 		</div>
@@ -2958,123 +2963,125 @@
 	    </a>
 
 	    <div class="rest-genres s-state-hidden">
-	      <div>
-		<div class="genre-card genre-card-comedy">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/comedy.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Комедия</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">17 435 просмотров</div>
-		    </a>
+	      <div class="center-span">
+		<div class="list-view">
+		  <div class="genre-card genre-card-comedy">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/comedy.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Комедия</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">17 435 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-romantic">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/romantic.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Романтика</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">17 001 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-romantic">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/romantic.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Романтика</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">17 001 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-school">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/school.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Школа</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">16 793 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-school">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/school.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Школа</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">16 793 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-harem">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/harem.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Гарем</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">15 998 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-harem">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/harem.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Гарем</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">15 998 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-sainen">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sainen.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Сэйнэн</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">15 357 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-sainen">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sainen.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Сэйнэн</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">15 357 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-sedze">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sedze.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Сёдзё</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">14 876 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-sedze">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/sedze.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Сёдзё</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">14 876 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-vampires">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/vampires.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Вампиры</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">14 813 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-vampires">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/vampires.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Вампиры</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">14 813 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-demons">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/demons.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Демоны</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">13 666 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-demons">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/demons.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Демоны</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">13 666 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
-		</div>
-		
-		
+		  
+		  
 
-		<div class="genre-card genre-card-senen-ai">
-		  <div class="expand-area">
-		    <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/senen-ai.png')">
-		      <div class="gap1" style="height: 20%"></div>
-		      <div class="genre-name">Сёнен-ай</div>
-		      <div class="gap2" style="height: 20%"></div>
-		      <div class="genre-stats">10 067 просмотров</div>
-		    </a>
+		  <div class="genre-card genre-card-senen-ai">
+		    <div class="expand-area">
+		      <a href="#" class="img-card" style="background-image: url('/img/tmp/cards/genres/senen-ai.png')">
+			<div class="gap1"></div>
+			<div class="genre-name">Сёнен-ай</div>
+			<div class="gap2"></div>
+			<div class="genre-stats">10 067 просмотров</div>
+		      </a>
+		    </div>
 		  </div>
+		  
+		  
 		</div>
-		
-		
 	      </div>
 	    </div>
           </div>
@@ -3159,5 +3166,6 @@
     <script type="text/javascript" src="/js/popups.js"></script>
     <script type="text/javascript" src="/js/main-page.js"></script>
     <script type="text/javascript" src="/js/main-page-player.js"></script>
+    <script type="text/javascript" src="/js/widgets/atitle-status-switch.js"></script>
   </body>
 </html>
