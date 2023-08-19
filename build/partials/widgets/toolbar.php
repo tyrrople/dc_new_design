@@ -34,7 +34,7 @@
               <div class="text">Наша команда</div>
             </div>
           </a>
-          <a href="#" style="margin-top: 1vw;">
+          <a href="#" style="margin-top: 0.5vw;">
             <div>
               <div class="icon"><img src="/img/widget/icon/Question.svg"/></div>
               <div class="text">FAQ</div>
@@ -66,14 +66,13 @@
           <div class="spanner">
             <?php $sres = [
                 'img' => '/img/tmp/cards/last-titles/sr.png',
-                'title_rus' => 'Эта фарфоровая кукла влюбилась',
+                'title_rus' => 'Реинкарнация безработного: История о пр...',
                 'type' => 'TV',
                 'year' => '2021',
                 'season' => 'Осень',
                 'status' => 'Завершён',
-                'title_original' => 'Sono Bisque Doll wa Koi wo Suru',
-                'studio' => 'CloverWorks',
-                'episodes' => [5,12],
+                'studio' => 'Studio Bind',
+                'episodes' => [9,12],
                 'genres' => ['Этти', 'Драма', 'Фэнтези'],
             ]; ?>
             <?php include("toolbar-search-result.php"); ?>
