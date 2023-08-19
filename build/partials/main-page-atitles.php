@@ -70,7 +70,31 @@
           [
               'img' => '/img/tmp/cards/last-titles/6.png',
               'user_status' => 'favorite'
-          ]
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
+          [
+              'img' => '/img/tmp/cards/last-titles/6.png',
+              'user_status' => 'favorite'
+          ],
       ];
 
       ?>

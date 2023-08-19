@@ -320,10 +320,10 @@
 }
 .w-notifications .w-status-area {
   position: relative;
-  top: -2vw;
-  left: 2vw;
-  width: 0.8vw;
-  height: 0.8vw;
+  top: -1.9vw;
+  left: 1.9vw;
+  width: 0.6vw;
+  height: 0.6vw;
   border-radius: 0.5vw;
 }
 .w-notifications .s-status-new {
@@ -340,8 +340,8 @@
 
 .w-card-atitle {
   position: relative;
-  width: 16.3vw;
-  height: 21.5vw;
+  width: 14.7vw;
+  height: 20.7vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,6 +350,7 @@
   position: relative;
   border-radius: 1.5vw;
   height: 95%;
+  width: 95%;
   transition: all 0.2s ease-in-out;
 }
 .w-card-atitle > .card > .info {
@@ -472,6 +473,7 @@
 
 .w-card-atitle:hover .card {
   height: 100%;
+  width: 100%;
 }
 
 .w-card-atitle-status-watching > .card, .w-card-atitle-status-watching > .popup {
@@ -604,7 +606,7 @@
 }
 .w-pager-oval .w-current-page {
   background-color: #ffffff;
-  width: 4.5vw;
+  width: 5.3vw;
 }
 
 .w-popup-btn-more {

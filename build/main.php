@@ -112,25 +112,25 @@
 
         <div class="content-pane">
           <!-- ongoing -->
-          <div class="picted-list" style="margin-top: 0">
+          <div class="picted-list last-updates-alist" style="margin-top: 0">
             <h2 class="main-page-title" id="last-updates-header">Последние обновления</h2>
             <?php include('partials/main-page-atitles.php'); ?>
           </div>
 
           <!-- popular releases -->
-          <div class="picted-list" style="margin-top: 8vw">
+          <div class="picted-list popular-releases-alist">
             <h2 class="main-page-title">Популярные релизы</h2>
             <?php include('partials/main-page-atitles.php'); ?>
           </div>
 
           <!-- popular genres -->
-          <div class="picted-list" style="margin-top: 8vw">
+          <div class="picted-list popular-genres-list">
             <h2 class="main-page-title">Популярные жанры</h2>
             <?php include('partials/main-page-top-genres.php'); ?>
           </div>
 
           <!-- news -->
-          <div class="picted-list" style="margin-top: 8vw">
+          <div class="picted-list news-list">
             <h2 class="main-page-title">Важные новости</h2>
             <div class="news">
               <?php 

@@ -93,7 +93,7 @@
           <img alt="" src="/img/widget/icon/Notifications.svg"/>
           <div class="w-status-area s-status-new"></div>
         </a>
-        <div class="w-notifications-popup" id="js-w-notifications-popup" style="display: block;">
+        <div class="w-notifications-popup" id="js-w-notifications-popup" style="">
           <div class="w-notifications-popup-inner">
             <div class="msg-categories">
               <a href="#" class="category m-has-messages m-selected">
