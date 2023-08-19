@@ -7,13 +7,13 @@
   border-radius: 0.6vw;
   color: #FFFFFF;
   float: left;
-  font-size: 1.2vw;
+  font-size: 1vw;
   padding: 0 0.5vw;
   background: rgba(255, 255, 255, 0.4);
 }
 
 .w-group-tag {
-  font-size: 1.2vw;
+  font-size: 1vw;
   padding: 0 0.5vw;
   font-weight: 500;
   display: flex;
@@ -50,7 +50,6 @@
   font-size: 1.2vw;
   float: left;
   font-weight: 500;
-  margin-right: 0.8vw;
   padding: 0 0.5vw;
   background-color: #fff;
   color: #484848;
@@ -65,7 +64,6 @@
   font-size: 1.2vw;
   float: left;
   font-weight: 500;
-  margin-right: 0.8vw;
   padding: 0 0.5vw;
   background-color: #1C1B20;
   color: #fff;

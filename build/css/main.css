@@ -1562,13 +1562,13 @@ template {
   border-radius: 0.6vw;
   color: #FFFFFF;
   float: left;
-  font-size: 1.2vw;
+  font-size: 1vw;
   padding: 0 0.5vw;
   background: rgba(255, 255, 255, 0.4);
 }
 
 .w-group-tag {
-  font-size: 1.2vw;
+  font-size: 1vw;
   padding: 0 0.5vw;
   font-weight: 500;
   display: flex;
@@ -1605,7 +1605,6 @@ template {
   font-size: 1.2vw;
   float: left;
   font-weight: 500;
-  margin-right: 0.8vw;
   padding: 0 0.5vw;
   background-color: #fff;
   color: #484848;
@@ -1620,7 +1619,6 @@ template {
   font-size: 1.2vw;
   float: left;
   font-weight: 500;
-  margin-right: 0.8vw;
   padding: 0 0.5vw;
   background-color: #1C1B20;
   color: #fff;
@@ -1688,11 +1686,12 @@ template {
 }
 .top-pane .seek-widget {
   display: flex;
-  gap: 0.3vw;
+  margin-top: 6vw;
+  gap: 0.5vw;
 }
 .top-pane .seek-widget .fragment {
-  width: 2.4vw;
-  height: 0.4vw;
+  width: 3.1vw;
+  height: 0.5vw;
   background-color: #8b888b;
   border-radius: 1vw;
 }
@@ -1758,11 +1757,11 @@ template {
 }
 .player-top .title-info {
   flex-grow: 1;
-  margin-left: 4.5vw;
-  margin-top: 1vw;
+  margin-left: 4.1vw;
+  margin-top: 0.9vw;
   align-self: start;
   color: #ffffff;
-  font-size: 1.9vw;
+  font-size: 1.7vw;
   min-width: 30vw;
 }
 .player-top .title-info .w-genre-tag, .player-top .title-info .w-group-tag {
@@ -1775,21 +1774,21 @@ template {
   display: flex;
   justify-content: right;
   width: 90%;
-  margin-top: 1.2vw;
+  margin-top: 1vw;
   font-weight: 600;
 }
 .player-control-pp a {
-  margin-right: 3vw;
+  margin-right: 4vw;
   border-radius: 2vw;
-  height: 1.6vw;
-  min-width: 5.7vw;
+  height: 1.5vw;
+  min-width: 5.3vw;
   display: flex;
   align-items: center;
   border: 0.15vw solid #ffffff;
 }
 .player-control-pp .js-icon {
   display: inline-block;
-  margin-left: 0.6vw;
+  margin-left: 0.7vw;
   margin-right: 0.5vw;
   width: 0.9vw;
   height: 0.9vw;
@@ -1824,7 +1823,10 @@ template {
   margin-top: 1.6vw;
 }
 .title-info .tags {
-  margin-top: 0.95vw;
+  margin-top: 0.8vw;
+}
+.title-info .tags .w-group-tag {
+  margin-right: 0.6vw;
 }
 
 .player-bottom {
@@ -1835,12 +1837,16 @@ template {
 }
 @media (min-aspect-ratio: 8/5) {
   .player-bottom {
-    top: 85vh;
+    top: 80.5vh;
+  }
+}
+@media (max-aspect-ratio: 8/5) {
+  .player-bottom {
+    top: 80.5vh;
   }
 }
 .player-bottom .group-left {
-  margin-left: 4.5vw;
-  align-self: left;
+  margin-left: 4vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1860,7 +1866,8 @@ template {
 }
 .player-bottom .group-center a {
   display: flex;
-  top: 7vh;
+  top: 8.6vh;
+  left: 0.6vw;
   position: relative;
   height: 3vw;
 }
@@ -1869,6 +1876,7 @@ template {
 }
 .player-bottom .group-right {
   margin-right: 2vw;
+  width: 15.9vw;
 }
 
 .main-page-title {

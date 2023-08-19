@@ -41,11 +41,12 @@
 
     .seek-widget {
         display: flex;
-        gap: 0.3vw;
+        margin-top: 6vw;
+        gap: 0.5vw;
         
         .fragment {
-            width: 2.4vw;
-            height: 0.4vw;
+            width: 3.1vw;
+            height: 0.5vw;
             background-color: $theme-dark-color-seek-widget;
             border-radius: 1vw;
 
@@ -125,11 +126,11 @@
 
     .title-info {
         flex-grow: 1;
-        margin-left: 4.5vw;
-        margin-top: 1vw;
+        margin-left: 4.1vw;
+        margin-top: 0.9vw;
         align-self: start;
         color: $theme-dark-color-font-main;
-        font-size: 1.9vw;
+        font-size: 1.7vw;
         min-width: 30vw;
 
         .w-genre-tag, .w-group-tag {
@@ -145,14 +146,14 @@
     display: flex;
     justify-content: right;
     width: 90%;
-    margin-top: 1.2vw;
+    margin-top: 1vw;
     font-weight: 600;
 
     a {
-        margin-right: 3vw;
+        margin-right: 4vw;
         border-radius: 2vw;
-        height: 1.6vw;
-        min-width: 5.7vw;
+        height: 1.5vw;
+        min-width: 5.3vw;
         display: flex;
         align-items: center;
         border: 0.15vw solid $theme-dark-color-font-main;
@@ -160,7 +161,7 @@
 
     .js-icon {
         display: inline-block;
-        margin-left: 0.6vw;
+        margin-left: 0.7vw;
         margin-right: 0.5vw;
         width: 0.9vw;
         height: 0.9vw;
@@ -204,7 +205,10 @@
     }
 
     .tags {
-        margin-top: 0.95vw;
+        margin-top: 0.8vw;
+        .w-group-tag {
+            margin-right: 0.6vw;
+        }
     }
 }
 
@@ -213,16 +217,18 @@
     width: 100%;
     position: absolute;
     z-index: 2;
-
-    @media (min-aspect-ratio: 8/5) {
-        top: 85vh;
-    }
-
     display: flex;
 
+    @media (min-aspect-ratio: 8/5) {
+        top: 80.5vh;
+    }
+    @media (max-aspect-ratio: 8/5) {
+        top: 80.5vh;
+    }
+
+
     .group-left {
-        margin-left: 4.5vw;
-        align-self: left;
+        margin-left: 4vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -244,7 +250,8 @@
 
         a {
             display: flex;
-            top: 7vh;
+            top: 8.6vh;
+            left: 0.6vw;
             position: relative;
             height: 3vw;
 
@@ -256,6 +263,7 @@
 
     .group-right {
         margin-right: 2vw;
+        width: 15.9vw;
     }
 }
 
