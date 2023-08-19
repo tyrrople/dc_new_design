@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 .top-pane > .video > .player-container > .view-port video {
-  max-width: 100vw;
+  width: 100vw;
 }
 
 .top-pane {
@@ -191,7 +191,7 @@
 }
 @media (max-aspect-ratio: 8/5) {
   .player-bottom {
-    top: 80.5vh;
+    top: 50.5vw;
   }
 }
 .player-bottom .group-left {
