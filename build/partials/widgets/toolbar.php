@@ -93,7 +93,7 @@
           <img alt="" src="/img/widget/icon/Notifications.svg"/>
           <div class="w-status-area s-status-new"></div>
         </a>
-        <div class="w-notifications-popup" id="js-w-notifications-popup">
+        <div class="w-notifications-popup" id="js-w-notifications-popup" style="display: block;">
           <div class="w-notifications-popup-inner">
             <div class="msg-categories">
               <a href="#" class="category m-has-messages m-selected">
@@ -127,42 +127,48 @@
                     'img' => '/img/tmp/toolbar/messages/6.svg',
                     'title' => 'Важное оповещение!',
                     'text' => 'Тебе было выдано предупреждение (1/3)',
-                    'date' => '3 минут назад'
+                    'date' => '3 минут назад',
+                    'type' => 'notification'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
                 <?php $tbmsg = [
                     'img' => '/img/tmp/toolbar/messages/7.svg',
                     'title' => '69 людей оценили твой комментарий:',
                     'text' => '<a href="#">Ты ебланище, влагалище, пердун, дрочила, пидор, пизда, туз, малафья...</a>',
-                    'date' => '5 минут назад'
+                    'date' => '5 минут назад',
+                    'type' => 'notification'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
                 <?php $tbmsg = [
                     'img' => '/img/tmp/toolbar/messages/1.png',
                     'title' => 'Вышла новая серия: 6/12',
                     'text' => 'Эта фарфоровая кукла влюбилась',
-                    'date' => '2 дня назад'
+                    'date' => '2 дня назад',
+                    'type' => 'release'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
                 <?php $tbmsg = [
                     'img' => '/img/tmp/toolbar/messages/0.png',
                     'title' => 'Вышла новая серия: 5/12',
                     'text' => 'Созданный в Бездне: Солнце, вспыхнувшее в Золотом городе',
-                    'date' => '5 дней назад'
+                    'date' => '5 дней назад',
+                    'type' => 'release'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
                 <?php $tbmsg = [
                     'img' => '/img/tmp/toolbar/messages/3.svg',
                     'title' => 'Yae Miko lover <3 ответил:',
                     'text' => 'Пошёл нахуй! <br/>на комментарий: <a href="#">Эммм... Чел... Ты забыл п...</a>',
-                    'date' => '13 часов назад'
+                    'date' => '13 часов назад',
+                    'type' => 'notification'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
                 <?php $tbmsg = [
                     'img' => '/img/tmp/toolbar/messages/5.png',
                     'title' => 'Достижение получено',
                     'text' => '<span class="w-achievemnt-yellow">Orru SIMP</span>',
-                    'date' => '1 неделю назад'
+                    'date' => '1 неделю назад',
+                    'type' => 'achievement'
                 ]; ?>
                 <?php include("toolbar-message.php"); ?>
               </div>
@@ -176,7 +182,7 @@
     <img src="/img/tmp/avatar.png"/>
   </a>
 
-  <div class="w-toolbar-avatar-popup" style="display: block;">
+  <div class="w-toolbar-avatar-popup">
     <div>
       <a href="#" class="avatar-row">
         <span class="icon">

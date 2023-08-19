@@ -517,24 +517,27 @@
     .w-notifications-popup-inner {
         @include w-popup-basic;
         position: absolute;
-        top: 4vw;
-        right: 6.7vw;
-        width: 28.5vw;
-        max-height: 37vw;
+        top: 3.3vw;
+        left: 65.8vw;
+        width: 25.7vw;
+        max-height: 33.5vw;
         padding: 0.8vw 0 0 0;
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
+        font-size: 0.9vw;
 
         .mark-as-read {
             border-radius: calc($main-border-radius / 4);
             background-color: $theme-dark-color-button-autoplay;
             color: $theme-dark-color-font-main;
-            width: 17vw;
-            margin: 0.5vw auto 0.5vw 0.8vw;
+            width: 13.3vw;
+            margin: 0.5vw auto 0.5vw 0.5vw;
+            font-size: 0.8vw;
             img {
-                height: 1.5vw;
+                height: 1.2vw;
+                margin-right: 0.3vw;
             }
         }
 
@@ -542,7 +545,8 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 0.6vw;
+            margin-top: 0vw;
+            gap: 0;
 
             .category {
                 color: $theme-dark-color-seek-widget;
@@ -580,7 +584,7 @@
             background-color: #FFFFFF0d;
             border-radius: calc($main-border-radius / 2) calc($main-border-radius / 2) 0 0;
             width: 100%;
-            max-height: 37vw;
+            max-height: 28.4vw;
             display: flex;
             flex-direction: column;
             gap: 0.5vw;
@@ -602,7 +606,7 @@
                     border-radius: calc($main-border-radius / 3);
                     background-color: $theme-dark-color-bg-news-time;
                     color: $theme-dark-toolbar-message-fg;
-                    min-height: 6vw;
+                    min-height: 6.2vw;
                     height: 0;
 
                     a {
@@ -610,12 +614,14 @@
                         text-decoration: underline;
                     }
                     
-                    > .info-container {
+                    .info-container {
                         display: flex;
                         flex-direction: row;
                         height: 100%;
 
                         a.title {
+                            margin-top: 0.6vw;
+                            font-size: 1vw;
                             color: $theme-dark-color-font-main;
                             text-decoration: none;
                         }
@@ -638,28 +644,47 @@
                             height: 100%;
 
                             .body {
+                                margin-top: 0.2vw;
                                 flex-grow: 3;
                             }
 
                             .date {
+                                font-size: 0.8vw;
                                 width: 100%;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-end;
 
                                 >div {
-                                    margin-right: 0.5vw;
+                                    margin-right: 0.3vw;
+                                    margin-bottom: 0.4vw;
                                 }
                             }
                         }
                     }
 
+                    .message-type-notification img {
+                        width: 1.7vw;
+                        margin-left: 0.5vw;
+                    }
+                    .message-type-release img {
+                        width: 3.8vw;
+                        margin-left: 0.5vw;
+                    }
+
+                    .message-type-achievement img {
+                        width: 3.8vw;
+                        margin-left: 0.5vw;
+                    }
+
+
+
                     .close-btn {
                         position: absolute;
-                        top: 0vw;
-                        right: 0.5vw; 
-                        width: 1.5vw;
-                        height: 1.5vw;
+                        top: 0.5vw;
+                        right: 0.8vw; 
+                        width: 1.3vw;
+                        height: 1.3vw;
 
                         img {
                             width: 100%;

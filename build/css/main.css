@@ -1222,31 +1222,35 @@ template {
   display: none;
   z-index: 20;
   position: absolute;
-  top: 4vw;
-  right: 6.7vw;
-  width: 28.5vw;
-  max-height: 37vw;
+  top: 3.3vw;
+  left: 65.8vw;
+  width: 25.7vw;
+  max-height: 33.5vw;
   padding: 0.8vw 0 0 0;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  font-size: 0.9vw;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .mark-as-read {
   border-radius: 0.475vw;
   background-color: #484848;
   color: #ffffff;
-  width: 17vw;
-  margin: 0.5vw auto 0.5vw 0.8vw;
+  width: 13.3vw;
+  margin: 0.5vw auto 0.5vw 0.5vw;
+  font-size: 0.8vw;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .mark-as-read img {
-  height: 1.5vw;
+  height: 1.2vw;
+  margin-right: 0.3vw;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .msg-categories {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 0.6vw;
+  margin-top: 0vw;
+  gap: 0;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .msg-categories .category {
   color: #8b888b;
@@ -1277,7 +1281,7 @@ template {
   background-color: rgba(255, 255, 255, 0.0509803922);
   border-radius: 0.95vw 0.95vw 0 0;
   width: 100%;
-  max-height: 37vw;
+  max-height: 28.4vw;
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
@@ -1299,55 +1303,72 @@ template {
   border-radius: 0.6333333333vw;
   background-color: rgba(255, 255, 255, 0.1019607843);
   color: #C4C4C4;
-  min-height: 6vw;
+  min-height: 6.2vw;
   height: 0;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message a {
   color: #FFA0BD;
   text-decoration: underline;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container a.title {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container a.title {
+  margin-top: 0.6vw;
+  font-size: 1vw;
   color: #ffffff;
   text-decoration: none;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .picture {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .picture img {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .picture img {
   max-width: 4vw;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .text {
   margin-left: 0.5vw;
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .body {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .text .body {
+  margin-top: 0.2vw;
   flex-grow: 3;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date {
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .text .date {
+  font-size: 0.8vw;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message > .info-container .text .date > div {
-  margin-right: 0.5vw;
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .info-container .text .date > div {
+  margin-right: 0.3vw;
+  margin-bottom: 0.4vw;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .message-type-notification img {
+  width: 1.7vw;
+  margin-left: 0.5vw;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .message-type-release img {
+  width: 3.8vw;
+  margin-left: 0.5vw;
+}
+.w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .message-type-achievement img {
+  width: 3.8vw;
+  margin-left: 0.5vw;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn {
   position: absolute;
-  top: 0vw;
-  right: 0.5vw;
-  width: 1.5vw;
-  height: 1.5vw;
+  top: 0.5vw;
+  right: 0.8vw;
+  width: 1.3vw;
+  height: 1.3vw;
 }
 .w-notifications-container > .w-notifications-popup .w-notifications-popup-inner .messages .scroll-container .message .close-btn img {
   width: 100%;
