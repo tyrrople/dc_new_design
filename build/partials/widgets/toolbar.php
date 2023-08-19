@@ -176,7 +176,7 @@
     <img src="/img/tmp/avatar.png"/>
   </a>
 
-  <div class="w-toolbar-avatar-popup">
+  <div class="w-toolbar-avatar-popup" style="display: block;">
     <div>
       <a href="#" class="avatar-row">
         <span class="icon">

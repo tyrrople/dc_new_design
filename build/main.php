@@ -195,5 +195,6 @@
     <script type="text/javascript" src="/js/main-page.js"></script>
     <script type="text/javascript" src="/js/main-page-player.js"></script>
     <script type="text/javascript" src="/js/widgets/atitle-status-switch.js"></script>
+    <script type="text/javascript" src="/js/reload.js"></script>
   </body>
 </html>
