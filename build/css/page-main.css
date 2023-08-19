@@ -77,14 +77,14 @@
 }
 
 .m-logo-main {
-  margin-left: 4.5vw;
+  margin-left: 4.1vw;
 }
 .m-logo-main > img {
-  width: 15vw;
+  width: 12.7vw;
 }
 
 .m-navbar-main {
-  margin-top: 0.6vw;
+  margin-top: 0.5vw;
 }
 
 .m-navbar-left {
@@ -92,10 +92,10 @@
 }
 
 .w-navbar .m-avatar-toolbar {
-  margin-left: 1vw;
-  width: 3vw;
-  height: 3vw;
-  float: right;
+  margin-left: 0.5vw;
+  margin-right: 0.9vw;
+  width: 2.6vw;
+  height: 2.6vw;
 }
 
 .player-top {
@@ -406,12 +406,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 1vw;
+  gap: 0.3vw;
   margin-bottom: 1vw;
 }
 .picted-list .news .new-card {
-  width: 25vw;
-  height: 25vw;
+  width: 22vw;
+  height: 22vw;
 }
 .picted-list .news .new-card .expand-area {
   width: 100%;
@@ -431,40 +431,43 @@
 }
 .picted-list .news .new-card .expand-area .img-card .info {
   font-weight: 500;
-  margin-top: 85%;
+  margin-top: 16vw;
   height: 7vw;
-  width: 100%;
+  width: 101%;
+  position: relative;
   border-radius: 1.5vw;
   background-color: #1C1B20;
 }
 .picted-list .news .new-card .expand-area .img-card .info .title {
-  font-size: 1vw;
-  padding: 0.6vw;
+  font-size: 1.1vw;
+  padding: 0.6vw 0.9vw;
 }
-.picted-list .news .new-card .expand-area .img-card .info > div {
+.picted-list .news .new-card .expand-area .img-card .info .datetime {
+  position: absolute;
+  top: 5vw;
   width: 100%;
 }
-.picted-list .news .new-card .expand-area .img-card .info > div .date, .picted-list .news .new-card .expand-area .img-card .info > div .time {
-  font-size: 1vw;
+.picted-list .news .new-card .expand-area .img-card .info .datetime .date, .picted-list .news .new-card .expand-area .img-card .info .datetime .time {
+  font-size: 0.9vw;
   border-radius: 0.5vw;
   display: flex;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1019607843);
   color: #AAAAAA;
 }
-.picted-list .news .new-card .expand-area .img-card .info > div .date {
+.picted-list .news .new-card .expand-area .img-card .info .datetime .date {
   float: left;
   width: 5.5vw;
   margin-left: 1.1vw;
 }
-.picted-list .news .new-card .expand-area .img-card .info > div .time {
+.picted-list .news .new-card .expand-area .img-card .info .datetime .time {
   float: right;
   width: 3.5vw;
   margin-right: 1.1vw;
 }
 .picted-list .news .new-card .expand-area .img-card:hover {
   filter: brightness(120%);
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(0);
 }
 
 .footer {

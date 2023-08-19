@@ -96,14 +96,14 @@
 }
 
 .m-logo-main {
-    margin-left: 4.5vw;
+    margin-left: 4.1vw;
     >img {
-        width: 15vw;
+        width: 12.7vw;
     }
 }
 
 .m-navbar-main {
-    margin-top: 0.6vw;    
+    margin-top: 0.5vw;    
 }
 
 .m-navbar-left {
@@ -112,10 +112,10 @@
 
 
 .w-navbar .m-avatar-toolbar {
-    margin-left: 1vw;
+    margin-left: 0.5vw;
+    margin-right: 0.9vw;
     width: $navbar-height;
     height: $navbar-height;
-    float: right;
 }
 
 .player-top {
@@ -437,12 +437,12 @@
         display: flex;   
         width: 100%;
         justify-content: center;
-        gap: 1vw;
+        gap: 0.3vw;
         margin-bottom: 1vw;
 
         .new-card {
-            width: 25vw;
-            height: 25vw;
+            width: 22vw;
+            height: 22vw;
 
             .expand-area {
                 width: 100%;
@@ -462,22 +462,25 @@
 
                     .info {
                         font-weight: 500;
-                        margin-top: 85%;
+                        margin-top: 16vw;
                         height: 7vw;
-                        width: 100%;
+                        width: 101%;
+                        position: relative;
                         border-radius: calc($main-border-radius - 0.4vw);
                         background-color: $theme-dark-color-bg-black;
 
                         .title {
-                            font-size: 1vw;
-                            padding: 0.6vw;
+                            font-size: 1.1vw;
+                            padding: 0.6vw 0.9vw;
                         }
 
-                        >div {
+                        .datetime {
+                            position: absolute;
+                            top: 5vw;
                             width: 100%;
 
                             .date, .time {
-                                font-size: 1vw;
+                                font-size: 0.9vw;
                                 border-radius: 0.5vw;
                                 display: flex;
                                 justify-content: center;
@@ -503,7 +506,7 @@
 
                 .img-card:hover {
                     filter: brightness(120%);
-                    transform: scale(1.05);
+                    transform: scale(1.05) translateZ(0);
                 }
             }
         }

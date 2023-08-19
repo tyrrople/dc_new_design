@@ -2,15 +2,14 @@
 
 @import 'widgets/atitle-status-switch.scss';
 
-.w-dc-logo-white {
-    width: calc($navbar-height*4.8);
-    height: $theme-dark-color-navbar-bg;
-}
-
 .w-navbar {
     display: flex;
-    width: 98%;
+    width: 95.8vw;
     font-weight: 500;
+    justify-content: left;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
 
     .w-spanner {
         height: $navbar-height;
@@ -30,58 +29,45 @@
     border-radius: calc($navbar-height/3) 0 0 calc($navbar-height/3);
     height: $navbar-height;
     background: $theme-dark-color-navbar-bg;
-}
 
-.w-navbar .w-more-btn-container {
-    float: left;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
 
-.w-navbar-left .w-button {
-    border-radius: calc($navbar-height*0.25);
-    height: calc($navbar-height * 0.6);
-    background-color: $theme-dark-color-button-autoplay;
-    font-size: 1vw;
-    font-weight: 500;
-    float: left;
-    padding: 0 0.6vw 0 0.6vw;
-    margin: 0.6vw auto auto 0.6vw;
-    line-height: 1.8vw;
-    color: $theme-dark-color-font-main;
-    text-decoration: none;
-    display: block;
-}
+    >.w-button:first-child { margin-left: 0.5vw; }
 
-.w-navbar-left .w-button > img {
-    float: left;
-    height: 1.3vw;
-    margin-right: 0.1vw;
-    margin-top: 0.25vw;
-}
+    .w-button {
+        border-radius: calc($navbar-height*0.25);
+        height: calc($navbar-height * 0.6);
+        background-color: $theme-dark-color-button-autoplay;
+        font-size: 0.9vw;
+        font-weight: 500;
+        float: left;
+        padding: 0 0.6vw 0 0.6vw;
+        color: $theme-dark-color-font-main;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
 
-.w-navbar-left .w-btn-rooms-list {
-    padding: 0 0.6vw 0 0.6vw;
-    img {
-        margin-right: 0.4vw;
+        >img {
+            height: 1.2vw;
+            margin-right: 0.3vw;
+        }
+    }
+
+    .w-more-btn-container > .w-btn-more {
+        @media (min-width: $break-desktop-width) {
+            margin-left: 1vw;
+        }
+
+        >img {
+            height: 1.2vw;
+            margin-right: 0;
+        }
     }
 }
 
-.w-navbar-left .w-btn-schedule > img {
-    margin-right: 0.4vw;
-}
-
-.w-navbar-left .w-btn-more {
-    padding: 0 0 0 0;
-    @media (min-width: $break-desktop-width) {
-        margin-left: 1.7vw;
-    }
-    
-    img {
-        width: 2.7vw;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 .w-navbar > .w-navbar-right {
     height: $navbar-height;
@@ -90,6 +76,7 @@
     flex-grow: 2;
     display: flex;
     justify-content: right;
+    align-items: center;
 
     >form {
         display: flex;
@@ -101,7 +88,6 @@
     border-radius: calc($navbar-height/3.5) 0 0 calc($navbar-height/3.5);
     width: calc($navbar-height/3.5);
     height: calc($navbar-height * 0.7);
-    margin: 0.5vw auto auto auto;
     background-color: $theme-dark-search-widget-color;
 }
 
@@ -109,7 +95,6 @@
     border-radius: 0 calc($navbar-height/3.5) calc($navbar-height/3.5) 0;
     width: calc($navbar-height/3.5);
     height: calc($navbar-height * 0.7);
-    margin: 0.5vw auto auto auto;
     background-color: $theme-dark-search-widget-color;
     flex-grow: 2;
 }
@@ -121,7 +106,6 @@
         font-size: 1.2vw;
         height: calc($navbar-height * 0.7);
         border: 0px;
-        margin: 0.5vw auto auto auto;
         min-width: 6vw;
         width: 100%;
         color: $theme-dark-color-font-main;
@@ -144,7 +128,7 @@
 
 .w-notifications {
     height: calc($navbar-height * 0.7);
-    margin: 0.5vw 1vw auto 0.6vw;
+    margin: auto 0.5vw auto 0.9vw;
     border-radius: calc($navbar-height/3.5);
     float: right;
     img {
@@ -702,7 +686,7 @@
 }
  
 .w-search-widget {
-    width: 26.5vw;
+    width: 28vw;
     z-index: 10;
 
     .w-search-popup {
