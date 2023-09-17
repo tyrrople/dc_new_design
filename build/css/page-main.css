@@ -211,8 +211,8 @@
 .player-bottom .group-left .go-to-title {
   width: 13vw;
   font-size: 1vw;
-  margin-top: 0.7vw;
-  height: 1.8vw;
+  margin-top: 5vw;
+  height: 2vw;
 }
 .player-bottom .group-center {
   flex-grow: 3;
@@ -603,4 +603,8 @@
 }
 .footer > .bottom-part .policy {
   margin-right: 5vw;
+}
+
+.m-main-page-ustatus {
+  top: 2.5vw;
 }

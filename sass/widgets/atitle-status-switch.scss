@@ -1,190 +1,162 @@
 @import '../vars.scss';
 
-.w-atitle-status-switch {
-    position: relative;
-    font-size: 0.9vw;
-    font-weight: 400;
+.w-atitle-switch-container {
 
-    .button-border {
-        border-width: 2px;
-        border-style: solid;
-        box-sizing: border-box;
-        height: 1.8vw;
-        width: 13vw;
-        position: relative;
-        display: block;
-        top: 1.8vw;
-        left: 0vw;
-        z-index: 26;
-        border-radius: 0.86vw;
-    }
-
-    .button {
-        color: $theme-dark-color-font-main;
-        border-radius: 0.86vw;
-        position: relative;
-        z-index: 25;
-        width: 13vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: 500;
-        background-color: $theme-dark-color-ustatus-button;
-        height: 1.8vw;
-
-        .button-caption-area {
-            flex-grow: 2;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            
-            .status-name {
-                height: 1.8vw;
-                align-self: center;
-                border-radius: 0.7vw;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
-            .status-icon-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                .status-icon {
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    line-height: -1vw;
-                    width: 1.3vw;
-                    height: 1.3vw;
-                }
-            }
-        }
-
-        .drop-image {
-            align-self: flex-end;
-            background-color: $theme-dark-color-button-autoplay;
-            border-radius: 0.7vw;
-            width: 1.8vw;
-            height: 1.8vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 0.05vw;
-            >img {
-                width: 0.5vw;
-            }
-        }
-    }
-
-    .dropdown {
-        display: none;
-        z-index: 27;
-        width: 13vw;
-        left: 0vw;
-        top: -11.3vw;
+    >.w-atitle-status-switch {
         position: absolute;
-        font-size: 0.9vw;
-        font-weight: 400;
-        background-color: $theme-dark-color-navbar-bg-no-transparent;
-        border-radius: 0.86vw;
-        z-index: 25;
-        height: 14vw;
+        font-weight: 500;
 
-        >.dropdown-content {
-            overflow: hidden;
-            padding: 0.5vw 0;
-            background-color: $theme-dark-color-navbar-bg-no-transparent;
-            border-radius: 0.86vw;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        border-radius: 0.8vw;
+        border-width: 2px;
+        background-color: $theme-dark-color-ustatus-button;
+        color: $theme-dark-color-font-main;
+        border-style: solid;
+        height: 1.8vw;
+        width: 13vw;
+
+
+        a {
+            color: $theme-dark-color-font-main;
+        }
+
+        .statuses-list {
             display: flex;
             flex-direction: column;
-            gap: 0.5vw;
-            width: 100%;
-            border-width: 2px;
-            border-style: solid;
-            position: relative;
-            justify-content: center;
+            position: absolute;
+            top: 1.8vw;
+            z-index: 2;
+            font-size: 1vw;
 
             >a {
-                margin-left: 2.5%;
-                width: 95%;
-                color: $theme-dark-color-font-main;
-
-                >img {
-                    margin-left: 0.5vw;
-                    height: 1.5vw;
+                margin-left: 0.5vw;
+                img {
+                    height: 1.8vw;
                 }
             }
-            >a:last-child {
-                margin-bottom: 2vw;
+        }
+
+        .selected-status {
+            position: absolute;
+            font-weight: 500;
+            font-size: 1vw;
+            bottom: 0vw;
+            z-index: 3;
+            background-color: #1C1B20E5;
+            border-style: solid;
+            border-radius: 0.8vw;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 1.8vw;
+            
+            a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .status-name {
+
+                }
+                .arrow-icon {
+                    margin-left: auto;
+                    background-color: #FFFFFF1A;
+                    width: 1.7vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0.6vw;
+
+                    img {
+                        transform: rotate(0);
+                    }
+                }
             }
 
-            >a:hover {
-                background-color: $theme-dark-color-bg-news-time;
-                border-radius: 0.5vw;
+            .status-icon {
+                display: block;
+                margin-left: auto;
+                width: 1.5vw;
+                height: 1.5vw;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
         }
     }
 
     >.s-ustatus-none {
-        .button-border { border-color: #ffffff00; }
+        border-color: #ffffff00;
+        border-style: none;
+        border-width: 0;
         .status-name::before { content: 'Добавить в закладки' };
-        .button-border-caption-area .status-icon {
-            width: 0vw;
+        .selected-status .status-icon {
+            width: 0.5vw;
             height: 0vw;
+        }
+        .selected-status {
+            bottom: 0vw; 
         }
     }
     .s-ustatus-watching {
-        .button-border { border-color:  #A8DAFF; }
+        border-color:  #A8DAFF;
         .status-name::before { content: 'Смотрю' };
         .status-icon {
             background-image: url('/img/widget/icon/ustatus/watching.svg');
             margin-right: 0.3vw;
         }
+        .selected-status {
+            bottom: -0.15vw; 
+        }
     }
     .s-ustatus-planned {
-        .button-border { border-color:  #B9A8FF; }
+        border-color:  #B9A8FF;
         .status-name::before { content: 'Запланировано' };
         .status-icon {
             background-image: url('/img/widget/icon/ustatus/planned.svg');
             margin-right: 0.3vw;
         }
-
+        .selected-status {
+            bottom: -0.15vw; 
+        }
     }
     .s-ustatus-viewed {
-        .button-border { border-color:  #C9FFA8; }
+        border-color:  #C9FFA8;
         .status-name::before { content: 'Просмотрено' };
         .status-icon {
             background-image: url('/img/widget/icon/ustatus/viewed.svg');
             margin-right: 0.3vw;
         }
-
+        .selected-status {
+            bottom: -0.15vw; 
+        }
     }
     .s-ustatus-rewatching {
-        .button-border { border-color:  #FFECA8; }
+        border-color:  #FFECA8;
         .status-name::before { content: 'Пересматриваю' };
         .status-icon {
             background-image: url('/img/widget/icon/ustatus/rewatching.svg');
             margin-right: 0.3vw;
         }
-
+        .selected-status {
+            bottom: -0.15vw; 
+        }
     }
     .s-ustatus-favorite {
-        .button-border { border-color:  #FFA8D2; }
+        border-color:  #FFA8D2;
         .status-name::before { content: 'Избранное' };
         .status-icon {
             background-image: url('/img/widget/icon/ustatus/favorite.svg');
             margin-right: 0.3vw;
         }
+        .selected-status {
+            bottom: -0.15vw; 
+        }
     }
-    
 }
-
-.w-atitle-status-switch > .s-ustatus-none > .dropdown > div { border-color: #ffffff00; }
-.w-atitle-status-switch > .s-ustatus-watching > .dropdown > div { border-color:  #A8DAFF; }
-.w-atitle-status-switch > .s-ustatus-planned > .dropdown > div { border-color:  #B9A8FF; }
-.w-atitle-status-switch > .s-ustatus-viewed > .dropdown > div { border-color:  #C9FFA8; }
-.w-atitle-status-switch > .s-ustatus-rewatching > .dropdown > div { border-color:  #FFECA8; }
-.w-atitle-status-switch > .s-ustatus-favorite > .dropdown > div { border-color:  #FFA8D2; }

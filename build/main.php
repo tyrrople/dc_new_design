@@ -17,18 +17,18 @@
                   "src" => "/img/tmp/output.mp4",
                   "poster" => "/img/tmp/output.mp4.jpg"
               ],
-              [
-                  "src" => "/img/tmp/dc1.mp4",
-                  "poster" => "/img/tmp/dc1.mp4.jpg"
-              ],
-              [
-                  "src" => "/img/tmp/dc2.mp4",
-                  "poster" => "/img/tmp/dc2.mp4.jpg"
-              ],
-              [
-                  "src" => "/img/tmp/dc3.mp4",
-                  "poster" => "/img/tmp/dc3.mp4.jpg"
-              ]
+              /* [
+               *     "src" => "/img/tmp/dc1.mp4",
+               *     "poster" => "/img/tmp/dc1.mp4.jpg"
+               * ],
+               * [
+               *     "src" => "/img/tmp/dc2.mp4",
+               *     "poster" => "/img/tmp/dc2.mp4.jpg"
+               * ],
+               * [
+               *     "src" => "/img/tmp/dc3.mp4",
+               *     "poster" => "/img/tmp/dc3.mp4.jpg"
+               * ] */
           ];
           ?>
           <div class="player-container">
@@ -49,7 +49,7 @@
             <div class="group-left">
               <?php 
               $atstat = [
-                  'status' => 'none'
+                  'status' => 'planned'
               ];
               ?>
               <?php include("partials/widgets/widget-atitle-status-switch.php"); ?>

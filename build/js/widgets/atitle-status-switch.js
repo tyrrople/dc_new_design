@@ -1,65 +1,90 @@
-const atitleStatusSwitchCss = {
-    active : {
-        left: "0.1vw",
-        bottom: "5px",
-        "z-index" : 27,
-        width : "12.8vw"
-    },
-    inactive : {
-        left: "0",
-        bottom: "0",
-        "z-index" : 25,
-        width : "13vw"
+(function () {  
+
+    const $wContainer = $(".w-atitle-status-switch").first();
+    const $wStatusesList = $wContainer.find(".statuses-list").first();
+    const $wArrowBtn = $wContainer.find(".arrow-icon").first();
+    const $wArrowBtnImg = $wContainer.find(".arrow-icon>img").first();
+
+    const aStatusPoses = {
+        opened: {
+            height: "13vw",
+            top: "-8.7vw"
+        },
+        closed: {
+            height: "1.8vw",
+            top: "2.5vw"
+        },
+    };
+
+    const aStatusListPoses = {
+        opened: {
+            top: "0vw"
+        },
+        closed: {
+            top: "1.8vw"
+        },
+    };
+
+    function aStatusPopupClose(e) {
+        const $selected = $(e.currentTarget);
+
+        // если вызов от щелчка внутри попапа
+        if ($selected.hasClass("js-ustatus")) {
+            const newStatus = Array.from($selected[0].classList).find((className) => className.startsWith("ustatus-") ).substring(8);
+            $wContainer.removeClass(Array.from($wContainer[0].classList).find((className) => className.startsWith("s-ustatus")));
+            $wContainer.addClass("s-ustatus-" + newStatus);
+
+            // сюда добавлять сохранение статуса на сервере ...
+        }
+
+        $({deg: -90}).animate({deg: 0}, {
+            duration: 500,
+            step: function(now) {
+                $wArrowBtnImg.css({
+                    transform: 'rotate(' + now + 'deg)'
+                });
+            }
+        });
+
+
+        $wContainer.animate(
+            {
+                height: `${aStatusPoses.closed.height}`,
+                top: `${aStatusPoses.closed.top}`,
+            }, 500, 
+            "linear", 
+            function () { $wStatusesList.css("top", `${aStatusListPoses.closed.top}`); },
+        );
     }
-};
 
-function atitleStatusSwitchCloseHandler(e) {
-    const $selected = $(e.currentTarget);
-    const $statusWidget = $(".w-atitle-status-switch").first();
+    function aStatusPopupOpen(e) {
+        $wStatusesList.css("top", `${aStatusListPoses.opened.top}`);
 
-    const $dropdown = $statusWidget.find(".dropdown").first();
-    const $borderBox = $statusWidget.find(".button-border").first();
-    const $dropImage = $statusWidget.find(".drop-image>img").first();
+        $({deg: 0}).animate({deg: -90}, {
+            duration: 500,
+            step: function(now) {
+                $wArrowBtnImg.css({
+                    transform: 'rotate(' + now + 'deg)'
+                });
+            }
+        });
 
-    const $button = $statusWidget.find(".button").first();
-    $button.css(atitleStatusSwitchCss.inactive);
-    $dropImage.css("transform", "rotate(0deg)");
-
-    // если вызов от щелчка внутри попапа
-    if ($selected.hasClass("js-ustatus")) {
-        const newStatus = Array.from($selected[0].classList).find((className) => className.startsWith("ustatus-") ).substring(8);
-        const $widget = $statusWidget.find(".js-status").first();
-        $widget.removeClass(Array.from($widget[0].classList).find((className) => className.startsWith("s-ustatus")));
-        $widget.addClass("s-ustatus-" + newStatus);
-
-        // сюда добавлять сохранение статуса на сервере ...
+        $wContainer.animate({
+            height: `${aStatusPoses.opened.height}`,
+            top: `${aStatusPoses.opened.top}`,
+        }, 500, "linear");
     }
 
-    setTimeout(function() { $borderBox.css("border-width", "2px"); }, 400);
-    $dropdown.fadeOut("slow", function() {});
-}
+    $(".w-atitle-status-switch .selected-status").click(function (e) {
+        e.preventDefault();
 
+        aStatusPopupOpen(e);
+        
+    });
 
-$(".w-atitle-status-switch .button-border").on("click", function(e) {
-    e.preventDefault();
+    $(".w-atitle-status-switch .statuses-list .js-ustatus").click(function (e) {
+        e.preventDefault();
+        aStatusPopupClose(e);
+    });
 
-    const $borderBox = $(e.currentTarget);
-    const $button = $(e.currentTarget.parentNode).find(".button").first();
-    const $statusWidget = $button.parents(".w-atitle-status-switch").first();
-    const $dropdown = $statusWidget.find(".dropdown").first();
-    const $dropImage = $statusWidget.find(".drop-image>img").first();
-    const $Image = $statusWidget.find(".drop-image>img").first();
-    $button.css(atitleStatusSwitchCss.active);
-
-    $borderBox.css("border-width", 0);
-
-    $dropImage.css("transform", "rotate(-90deg)");
-
-    popupToggleHandler(e, $dropdown, atitleStatusSwitchCloseHandler);
-});
-
-
-$(".w-atitle-status-switch .dropdown div > a").on("click", function (e) {
-    e.preventDefault();
-    atitleStatusSwitchCloseHandler(e);
-});
+})();
