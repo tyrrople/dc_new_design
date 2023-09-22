@@ -87,4 +87,10 @@
         aStatusPopupClose(e);
     });
 
+    $(document).on("click", function(e) {
+        if ($(e.target).parents(".w-atitle-status-switch").first()[0] === undefined) {
+            aStatusPopupClose(e);
+        }
+    });
+
 })();
